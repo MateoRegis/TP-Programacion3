@@ -1,0 +1,6 @@
+@ChefHub_HostAddress = http://localhost:5070
+
+GET {{ChefHub_HostAddress}}/
+Accept: application/json
+
+###

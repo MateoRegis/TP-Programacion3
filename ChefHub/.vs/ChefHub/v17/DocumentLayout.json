@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\usuario\\source\\repos\\chefhub\\chefhub\\chefhub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\chefhub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\usuario\\source\\repos\\chefhub\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\source\\repos\\chefhub\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\usuario\\source\\repos\\chefhub\\chefhub\\chefhub.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\chefhub.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChefHub",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\ChefHub\\ChefHub.csproj",
+              "RelativeDocumentMoniker": "ChefHub\\ChefHub.csproj",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\ChefHub\\ChefHub.csproj",
+              "RelativeToolTip": "ChefHub\\ChefHub.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-13T19:29:20.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Infrastructure",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-13T19:29:08.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Application",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-13T19:27:55.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChefHub.http",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\ChefHub\\ChefHub.http",
+              "RelativeDocumentMoniker": "ChefHub\\ChefHub.http",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ChefHub\\ChefHub\\ChefHub.http",
+              "RelativeToolTip": "ChefHub\\ChefHub.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-09-13T19:24:41.306Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
