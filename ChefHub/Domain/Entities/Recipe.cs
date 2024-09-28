@@ -9,7 +9,7 @@ namespace Domain.Entities
         public string? Title { get; set; }
         public string? Description { get; set; }
         public List<string>? Ingredients { get; set; }
-        public StringBuilder? Instructions { get; set; }
+        public string? Instructions { get; set; }
         public string? UrlImage { get; set; }
         public List<string>? Categories { get; set; }
         public int? PreparationTime { get; set; }
