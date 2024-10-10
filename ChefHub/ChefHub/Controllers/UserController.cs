@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
+using Application.Models.Request;
 using Application.Models.Response;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChefHub.Controllers
@@ -13,8 +14,8 @@ namespace ChefHub.Controllers
         public UserController(IUserService userService)
         {
             _userService = userService;
-
         }
+        [Authorize]
         [HttpGet("[action]")]
         public async Task<ActionResult<UserResponse>> GetUserById(int id)
         {
@@ -28,8 +29,18 @@ namespace ChefHub.Controllers
 
                 return NotFound(ex.Message);
             }
-
-
         }
+        [HttpPost("[action]")]
+        public async Task<ActionResult<UserResponse>> Register(UserRequest request)
+        {
+
+            if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
+            {
+                return BadRequest(new { success = false, message = "El email y contraseña son obligatorios" });
+            }
+            var response = await _userService.Register(request);
+            return Created("", new { success = true, data = response });
+        }
+
     }
 }

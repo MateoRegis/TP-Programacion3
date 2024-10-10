@@ -3,12 +3,8 @@ using Application.Mappings;
 using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
+using Domain.Enum;
 using Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Services
 {
@@ -23,11 +19,11 @@ namespace Application.Services
             _userMapping = userMapping;
         }
 
-        public async Task<int> CreateUserAsync(UserRequest request)
+        public async Task<UserResponse> CreateUserAsync(UserRequest request)
         {
             var user = _userMapping.FromRequestToEntity(request);
             var entity = await _repositoryBase.AddAsync(user);
-            return entity.Id;
+            return _userMapping.FromUserToResponse(entity);
         }
 
         public async Task<UserResponse> GetUserById(int id)
@@ -40,6 +36,15 @@ namespace Application.Services
             }
             var response = _userMapping.FromUserToResponse(entity);
             return response;
+        }
+
+        public async Task<UserResponse> Register(UserRequest request)
+        {
+            var user = _userMapping.FromRequestToEntity(request);
+            user.TipoRol = Rol.Common;
+            var response = await _repositoryBase.AddAsync(user);
+            var responseMapped = _userMapping.FromUserToResponse(response);
+            return responseMapped;
         }
     }
 }
