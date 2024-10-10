@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj"
               }
             }
           }
@@ -68,25 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
         "projectName": "ChefHub",
-        "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
-        "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,17 +87,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
               },
-              "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -124,6 +118,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -148,25 +154,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,6 +176,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -212,25 +215,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -238,14 +237,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
+              "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
               }
             }
           }
@@ -264,6 +264,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -280,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
