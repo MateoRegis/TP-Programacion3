@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\infrastructure\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\models\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\models\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\infrastructure\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,119 +46,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T23:24:28.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ChefHub\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ChefHub\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T23:18:50.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T23:06:31.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserMapping.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Mappings\\UserMapping.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\UserMapping.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Mappings\\UserMapping.cs",
-              "RelativeToolTip": "Application\\Mappings\\UserMapping.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:53:24.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Models\\Response\\UserResponse.cs",
-              "RelativeDocumentMoniker": "Application\\Models\\Response\\UserResponse.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Models\\Response\\UserResponse.cs",
-              "RelativeToolTip": "Application\\Models\\Response\\UserResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:53:00.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
               "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAAmAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwCkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T22:52:29.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AdminUserController.cs",
               "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AdminUserController.cs",
               "RelativeDocumentMoniker": "ChefHub\\Controllers\\AdminUserController.cs",
               "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AdminUserController.cs",
               "RelativeToolTip": "ChefHub\\Controllers\\AdminUserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T22:49:48.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "ChefHub\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
-              "RelativeToolTip": "ChefHub\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:49:36.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\UserRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:34:46.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:34:29.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ChefHub\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ChefHub\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:27:21.895Z",
               "EditorCaption": ""
             }
           ]

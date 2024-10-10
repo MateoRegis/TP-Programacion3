@@ -3,6 +3,7 @@ using Application.Mappings;
 using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
+using Domain.Enum;
 using Domain.Interfaces;
 
 namespace Application.Services
@@ -35,6 +36,15 @@ namespace Application.Services
             }
             var response = _userMapping.FromUserToResponse(entity);
             return response;
+        }
+
+        public async Task<UserResponse> Register(UserRequest request)
+        {
+            var user = _userMapping.FromRequestToEntity(request);
+            user.TipoRol = Rol.Common;
+            var response = await _repositoryBase.AddAsync(user);
+            var responseMapped = _userMapping.FromUserToResponse(response);
+            return responseMapped;
         }
     }
 }
