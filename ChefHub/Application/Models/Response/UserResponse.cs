@@ -1,11 +1,4 @@
-﻿using Domain.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Models.Response
+﻿namespace Application.Models.Response
 {
     public class UserResponse
     {
@@ -15,7 +8,6 @@ namespace Application.Models.Response
         public string? Email { get; set; }
         public string? UrlPhoto { get; set; }
         public string? Description { get; set; }
-        public string? Password { get; set; }
         public string? TipoRol { get; set; }
     }
 }

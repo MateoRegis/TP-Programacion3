@@ -4,11 +4,6 @@ using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
 using Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Services
 {
@@ -23,11 +18,11 @@ namespace Application.Services
             _userMapping = userMapping;
         }
 
-        public async Task<int> CreateUserAsync(UserRequest request)
+        public async Task<UserResponse> CreateUserAsync(UserRequest request)
         {
             var user = _userMapping.FromRequestToEntity(request);
             var entity = await _repositoryBase.AddAsync(user);
-            return entity.Id;
+            return _userMapping.FromUserToResponse(entity);
         }
 
         public async Task<UserResponse> GetUserById(int id)

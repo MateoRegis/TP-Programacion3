@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Domain.Enum;
+﻿using Domain.Enum;
 
 namespace Domain.Entities
 {
