@@ -9,7 +9,7 @@ namespace Infrastructure.Data
         public UserRepository(ApplicationDbContext context) : base(context)
         {
         }
-        public async Task<User?> GetUserByUserName(string email)
+        public async Task<User?> GetUserByUserEmail(string email)
         {
             return await _context.Users.SingleOrDefaultAsync(u => u.Email == email);
         }

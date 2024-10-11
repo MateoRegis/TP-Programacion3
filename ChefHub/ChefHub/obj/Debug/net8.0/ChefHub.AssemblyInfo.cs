@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChefHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0047c2b70e6843385e863137b67978b3b87f4975")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4d9b9ce7dd7ead74b602f49ccc392266af8a29")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChefHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChefHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

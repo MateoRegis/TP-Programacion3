@@ -6,7 +6,7 @@ namespace Application.Interfaces
     public interface IUserService
     {
         Task<UserResponse> CreateUserAsync(UserRequest request);
-        Task<UserResponse> GetUserById(int id);
-        Task<UserResponse> Register(UserRequest request);
+        Task<UserResponse?> GetUserById(int id);
+        Task<UserResponse?> Register(UserRequest request);
     }
 }

@@ -54,12 +54,12 @@ namespace Infrastructure.Services
             {
                 return null;
             }
-            var user = await _userRepository.GetUserByUserName(request.Email);
+            var user = await _userRepository.GetUserByUserEmail(request.Email);
             if (user == null)
             {
                 return null;
             }
-            if (user.Password == request.Password)
+            if (BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
             {
                 return user;
             }
