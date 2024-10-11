@@ -19,26 +19,25 @@ namespace ChefHub.Controllers
         [HttpGet("[action]")]
         public async Task<ActionResult<UserResponse>> GetUserById(int id)
         {
-            try
+            var response = await _userService.GetUserById(id);
+            if (response == null)
             {
-                var response = await _userService.GetUserById(id);
-                return Ok(response);
+                return NotFound(new { success = false, message = "No se encontró un usuario con ese id" });
             }
-            catch (Exception ex)
-            {
-
-                return NotFound(ex.Message);
-            }
+            return Ok(new { success = true, data = response });
         }
         [HttpPost("[action]")]
         public async Task<ActionResult<UserResponse>> Register(UserRequest request)
         {
-
             if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
             {
                 return BadRequest(new { success = false, message = "El email y contraseña son obligatorios" });
             }
             var response = await _userService.Register(request);
+            if (response == null)
+            {
+                return BadRequest(new { success = false, message = "Ya existe un usuario con este correo" });
+            }
             return Created("", new { success = true, data = response });
         }
 

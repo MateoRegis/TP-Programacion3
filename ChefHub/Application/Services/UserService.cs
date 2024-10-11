@@ -12,11 +12,12 @@ namespace Application.Services
     {
         private readonly IRepositoryBase<User> _repositoryBase;
         private readonly UserMapping _userMapping;
-
-        public UserService(IRepositoryBase<User> repositoryBase, UserMapping userMapping)
+        private readonly IUserRepository _userRepository;
+        public UserService(IRepositoryBase<User> repositoryBase, UserMapping userMapping, IUserRepository userRepository)
         {
             _repositoryBase = repositoryBase;
             _userMapping = userMapping;
+            _userRepository = userRepository;
         }
 
         public async Task<UserResponse> CreateUserAsync(UserRequest request)
@@ -26,20 +27,25 @@ namespace Application.Services
             return _userMapping.FromUserToResponse(entity);
         }
 
-        public async Task<UserResponse> GetUserById(int id)
+        public async Task<UserResponse?> GetUserById(int id)
         {
             var entity = await _repositoryBase.GetByIdAsync(id);
             if (entity == null)
             {
-
-                throw new Exception("No se encontro un usuario con este Id");
+                return null;
             }
             var response = _userMapping.FromUserToResponse(entity);
             return response;
         }
 
-        public async Task<UserResponse> Register(UserRequest request)
+        public async Task<UserResponse?> Register(UserRequest request)
         {
+            var exist = await _userRepository.GetUserByUserEmail(request.Email);
+            if(exist != null)
+            {
+                return null;
+            }
+            request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
             var user = _userMapping.FromRequestToEntity(request);
             user.TipoRol = Rol.Common;
             var response = await _repositoryBase.AddAsync(user);

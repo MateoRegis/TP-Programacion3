@@ -1,10 +1,9 @@
 ﻿using Domain.Enum;
 
-namespace Domain.Entities
+namespace Application.Models.Response
 {
-    public class Recipe
+    public class RecipeResponse
     {
-        public int Id { get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }
         public List<string>? Ingredients { get; set; }
@@ -13,6 +12,5 @@ namespace Domain.Entities
         public List<string>? Categories { get; set; }
         public int? PreparationTime { get; set; }
         public Difficulty Difficulty { get; set; }
-        public int UserId { get; set; }
     }
 }

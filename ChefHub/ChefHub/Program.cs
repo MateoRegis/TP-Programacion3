@@ -70,7 +70,10 @@ builder.Services.AddScoped<IRepositoryBase<User>, EFRepository<User>>();
 builder.Services.AddScoped<UserMapping>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICustomAuthenticationService, AuthenticationService>();
-
+builder.Services.AddScoped<IRecipeService, RecipeService>();
+builder.Services.AddScoped<RecipeMapping>();
+builder.Services.AddScoped<IRepositoryBase<Recipe>, EFRepository<Recipe>>();
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.Configure<AuthenticationServiceOptions>(
     builder.Configuration.GetSection(AuthenticationServiceOptions.Authentication));
 //--------------------------------------------------------------------------------------

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\interfaces\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\interfaces\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\ChefHub.csproj|solutionrelative:chefhub\\controllers\\adminusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\ppp\\desktop\\repo 3er cuatri\\tp-programacion3\\chefhub\\application\\services\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\services\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -46,54 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA5AAAA",
+              "DocumentIndex": 0,
+              "Title": "IRecipeService.cs",
+              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IRecipeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRecipeService.cs",
+              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Interfaces\\IRecipeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IRecipeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T23:24:28.619Z",
+              "WhenOpened": "2024-10-11T00:55:15.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "ChefHub\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
-              "RelativeToolTip": "ChefHub\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAbAAAA",
+              "DocumentIndex": 2,
+              "Title": "RecipeService.cs",
+              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\RecipeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\RecipeService.cs",
+              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\RecipeService.cs",
+              "RelativeToolTip": "Application\\Services\\RecipeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwCQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T23:18:50.682Z",
+              "WhenOpened": "2024-10-11T00:54:59.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
-              "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAqwCkAAAAJAAAA",
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "ChefHub\\Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "ChefHub\\Controllers\\RecipeController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwCcAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:52:29.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminUserController.cs",
-              "DocumentMoniker": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AdminUserController.cs",
-              "RelativeDocumentMoniker": "ChefHub\\Controllers\\AdminUserController.cs",
-              "ToolTip": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\AdminUserController.cs",
-              "RelativeToolTip": "ChefHub\\Controllers\\AdminUserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T22:49:48.899Z",
+              "WhenOpened": "2024-10-11T00:38:36.726Z",
               "EditorCaption": ""
             }
           ]
