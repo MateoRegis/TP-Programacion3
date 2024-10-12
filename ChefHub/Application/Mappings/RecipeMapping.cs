@@ -24,8 +24,10 @@ namespace Application.Mappings
 
         public RecipeResponse FromEntityToResponse(Recipe entity)
         {
+            var mapping = new CommentMapping();
             return new RecipeResponse
             {
+                Id = entity.Id,
                 Title = entity.Title,
                 Categories = entity.Categories,
                 Description = entity.Description,
@@ -34,6 +36,7 @@ namespace Application.Mappings
                 Instructions = entity.Instructions,
                 UrlImage = entity.UrlImage,
                 PreparationTime = entity.PreparationTime,
+                Comments = entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList(),
             };
         }
 

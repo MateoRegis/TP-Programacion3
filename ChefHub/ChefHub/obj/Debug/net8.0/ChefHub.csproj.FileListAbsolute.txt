@@ -310,3 +310,15 @@ C:\Users\ppp\Desktop\Repo 3ER CUATRI\TP-Programacion3\ChefHub\ChefHub\bin\Debug\
 C:\Users\ppp\Desktop\Repo 3ER CUATRI\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\ppp\Desktop\Repo 3ER CUATRI\TP-Programacion3\ChefHub\ChefHub\obj\Debug\net8.0\ChefHub.xml
 C:\Users\ppp\Desktop\Repo 3ER CUATRI\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\ChefHub.xml
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\OneDrive\Escritorio\Tpprogramcion3\TP-Programacion3\ChefHub\ChefHub\obj\Debug\net8.0\ChefHub.xml

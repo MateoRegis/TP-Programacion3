@@ -47,7 +47,7 @@ namespace Application.Services
             }
             request.Password = BCrypt.Net.BCrypt.HashPassword(request.Password);
             var user = _userMapping.FromRequestToEntity(request);
-            user.TipoRol = Rol.Common;
+            user.TipoRol = Role.Common;
             var response = await _repositoryBase.AddAsync(user);
             var responseMapped = _userMapping.FromUserToResponse(response);
             return responseMapped;
