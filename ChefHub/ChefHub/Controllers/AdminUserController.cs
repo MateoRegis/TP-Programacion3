@@ -24,7 +24,7 @@ namespace ChefHub.Controllers
         {
             //var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
             var userRoleClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
-            if (userRoleClaim != Rol.Admin.ToString())
+            if (userRoleClaim != Role.Admin.ToString())
             {
                 return Unauthorized("Se necesita rol de administrador para ejecutar esta accion");
             }

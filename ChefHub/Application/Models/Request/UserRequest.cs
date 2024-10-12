@@ -9,6 +9,6 @@ namespace Application.Models.Request
         public string? UrlPhoto { get; set; }
         public string? Description { get; set; }
         public string? Password { get; set; }
-        public Rol TipoRol { get; set; }
+        public Role TipoRol { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Domain.Enum
 {
-    public enum Rol
+    public enum Role
     {
         Admin = 0,
         Moderator = 1,

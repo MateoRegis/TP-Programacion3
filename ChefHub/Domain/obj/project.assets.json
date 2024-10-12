@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ppp\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\ppp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ppp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

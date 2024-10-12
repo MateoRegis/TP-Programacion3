@@ -74,6 +74,16 @@ builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddScoped<RecipeMapping>();
 builder.Services.AddScoped<IRepositoryBase<Recipe>, EFRepository<Recipe>>();
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
+
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<IRepositoryBase<Comment>, EFRepository<Comment>>();
+builder.Services.AddScoped<CommentMapping>();
+
+
+
+
+
 builder.Services.Configure<AuthenticationServiceOptions>(
     builder.Configuration.GetSection(AuthenticationServiceOptions.Authentication));
 //--------------------------------------------------------------------------------------
