@@ -4,7 +4,9 @@ using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
 using Domain.Enum;
+using Domain.Exceptions;
 using Domain.Interfaces;
+using System.Net;
 
 namespace Application.Services
 {
@@ -31,7 +33,7 @@ namespace Application.Services
             var recipeExist = await _repositoryBaseRecipe.GetByIdAsync(request.RecipeId);
             if (recipeExist == null)
             {
-                throw new Exception("-- No existe la recete a la que se le quiere agregar el Comentario--");
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             };
             var entity = _commentMapping.FromRequestToEntity(request, userId);
             var response = await _repositoryBaseComment.AddAsync(entity);
@@ -39,7 +41,7 @@ namespace Application.Services
 
             if (user == null)
             {
-                throw new Exception("-Usuario No Encontrado-");
+                throw new NotFoundException(HttpStatusCode.NotFound, "Usuario no encontrado.");
             };
             response.User = user;
 
@@ -53,7 +55,7 @@ namespace Application.Services
 
             if (recipeExist == null)
             {
-                throw new Exception("receta no encontrada");
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             }
             var comments = await _commentRepository.GetCommentsByRecipe(recipeId);
             var commentExist = comments.FirstOrDefault(c => c.Id == commentId);
@@ -61,14 +63,13 @@ namespace Application.Services
             if (commentExist == null)
 
             {
-                throw new Exception("comentario no encontrada");
+                throw new NotFoundException(HttpStatusCode.NotFound, "Comentario no encontrado.");
             }
-            if (role != Role.Moderator)
+            if (role == Role.Common)
             {
                 if (commentExist.UserId != userId)
                 {
-                    throw new Exception("coemntario no pertenece al usuario");
-
+                    throw new NotAllowedException(HttpStatusCode.Forbidden, "Comentario no pertenece al usuario");
                 }
             }
             await _repositoryBaseComment.DeleteAsync(commentExist);

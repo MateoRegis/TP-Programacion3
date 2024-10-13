@@ -3448,19 +3448,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\de\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
-      "projectName": "ChefHub",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\ChefHub.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\obj\\",
+      "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\Web.csproj",
+      "projectName": "Web",
+      "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\Web.csproj",
+      "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3468,18 +3473,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
+            "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Application\\Application.csproj"
             },
-            "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -3539,7 +3543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

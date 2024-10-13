@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using Domain.Enum;
+
+namespace Domain.Entities
 {
     public class Favorite
     {
@@ -7,5 +9,6 @@
         public int RecipeId { get; set; }
         public User? User { get; set; }
         public Recipe? Recipe { get; set; }
+        public FavoriteType FavoriteType { get; set; }
     }
 }
