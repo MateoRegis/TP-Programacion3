@@ -5,7 +5,6 @@
         Normal,
         Vegan,
         Vegetarian,
-        Carnivore,
         Keto,
         GlutenFree,
         SugarFree,

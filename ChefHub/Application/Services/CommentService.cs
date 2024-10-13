@@ -78,8 +78,8 @@ namespace Application.Services
         public async Task<List<CommentResponse>> GetCommentsByRecipe(int recipeId)
         {
             var response = await _commentRepository.GetCommentsByRecipe(recipeId);
-            var responSeMapped = response.Select(c => _commentMapping.FromEntityToResponse(c)).ToList();
-            return responSeMapped;
+            var responseMapped = response.Select(c => _commentMapping.FromEntityToResponse(c)).ToList();
+            return responseMapped;
         }
 
 
