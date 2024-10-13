@@ -2,6 +2,13 @@
 {
     public enum FavoriteType
     {
-        Vegan
+        Normal,
+        Vegan,
+        Vegetarian,
+        Carnivore,
+        Keto,
+        GlutenFree,
+        SugarFree,
+        LactoseFree
     }
 }
