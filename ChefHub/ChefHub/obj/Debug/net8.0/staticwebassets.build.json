@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "3tGgoUEzBR0ymFWM90p0/a+BhcTfIhWUVh9jA9zLnDM=",
-  "Source": "ChefHub",
-  "BasePath": "_content/ChefHub",
+  "Hash": "I45YKMxdLd4rSIfiy4Jy7K87CK1wxLboE3ngw90NHmQ=",
+  "Source": "Web",
+  "BasePath": "_content/Web",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

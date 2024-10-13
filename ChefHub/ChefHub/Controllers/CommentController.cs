@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Models.Request;
 using Domain.Enum;
+using Domain.Exceptions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,13 +21,6 @@ namespace ChefHub.Controllers
             _commentService = commentService;
         }
 
-        //[HttpGet("{recipeId}")]
-        //public async Task<ActionResult> GetCommentsByRecipe([FromRoute] int recipeId)
-        //{
-        //    var response = await _commentService.GetCommentsByRecipe(recipeId);
-
-        //    return Ok(new { success = true, data = response });
-        //}
         [Authorize]
         [HttpPost("[action]")]
 
@@ -47,14 +41,11 @@ namespace ChefHub.Controllers
                 return Ok(new { success = true, data = response });
 
             }
-            catch (Exception ex)
+            catch (NotFoundException ex)
             {
-
-                return NotFound(new { success = false, message = ex.Message });
-
-
-
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
+
 
 
         }
@@ -72,11 +63,13 @@ namespace ChefHub.Controllers
 
                 return NoContent();
             }
-            catch (Exception ex)
+            catch (NotFoundException ex)
             {
-
-                return NotFound(new { success = false, message = ex.Message });
-
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+            catch (NotAllowedException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
 
         }

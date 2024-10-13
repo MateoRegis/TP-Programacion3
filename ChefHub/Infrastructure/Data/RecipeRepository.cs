@@ -13,7 +13,6 @@ namespace Infrastructure.Data
         public async Task<List<Recipe>> GetRecipesByUser(int userId)
         {
             var recipes = await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.UserId == userId).ToListAsync();
-
             return recipes;
 
         }
