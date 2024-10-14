@@ -14,13 +14,15 @@ namespace Application.Services
     {
         private readonly IRepositoryBase<Favorite> _repositoryBaseFavorite;
         private readonly IRepositoryBase<User> _repositoryBaseUser;
+        private readonly IRepositoryBase<Recipe> _repositoryBaseRecipe;
         private readonly IFavoriteRepository _favoriteRepository;
         private readonly FavoriteMapping _favoriteMapping;
         private readonly RecipeMapping _recipeMapping;
-        public FavoriteService(IRepositoryBase<Favorite> repositoryBaseFavorite, IRepositoryBase<User> repositoryBaseUser, IFavoriteRepository favoriteRepository, FavoriteMapping favoriteMapping, RecipeMapping recipeMapping)
+        public FavoriteService(IRepositoryBase<Favorite> repositoryBaseFavorite, IRepositoryBase<User> repositoryBaseUser, IRepositoryBase<Recipe> repositoryBaseRecipe, IFavoriteRepository favoriteRepository, FavoriteMapping favoriteMapping, RecipeMapping recipeMapping)
         {
             _repositoryBaseFavorite = repositoryBaseFavorite;
             _repositoryBaseUser = repositoryBaseUser;
+            _repositoryBaseRecipe = repositoryBaseRecipe;
             _favoriteRepository = favoriteRepository;
             _favoriteMapping = favoriteMapping;
             _recipeMapping = recipeMapping;
@@ -28,7 +30,7 @@ namespace Application.Services
 
         public async Task AddToFavorites(int userId, FavoriteRequest favoriteRequest)
         {
-            var recipeExist = await _repositoryBaseFavorite.EntityExistsAsync(favoriteRequest.RecipeId);
+            var recipeExist = await _repositoryBaseRecipe.EntityExistsAsync(favoriteRequest.RecipeId);
             if (!recipeExist)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
