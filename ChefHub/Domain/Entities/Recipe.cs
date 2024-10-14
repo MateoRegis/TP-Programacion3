@@ -13,7 +13,7 @@ namespace Domain.Entities
         public List<string>? Categories { get; set; }
         public List<Comment>? ListComments { get; set; }
         public int? PreparationTime { get; set; }
-        public Difficulty Difficulty { get; set; }
+        public Difficulty? Difficulty { get; set; }
         public int UserId { get; set; }
     }
 }
