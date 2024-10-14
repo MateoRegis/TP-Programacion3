@@ -16,6 +16,10 @@ namespace Infrastructure.Data
             return recipes;
 
         }
+        public async Task<Recipe?> GetRecipeById(int userId, int recipeId)
+        {
+            return await _context.Recipes.Include(r => r.ListComments).Where(r => r.UserId == userId && r.Id == recipeId).FirstOrDefaultAsync();
+        }
     }
 
 }

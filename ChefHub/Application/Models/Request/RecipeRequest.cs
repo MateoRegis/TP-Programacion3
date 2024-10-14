@@ -12,6 +12,6 @@ namespace Application.Models.Request
         public string? UrlImage { get; set; }
         public List<string>? Categories { get; set; }
         public int? PreparationTime { get; set; }
-        public Difficulty Difficulty { get; set; }
+        public Difficulty? Difficulty { get; set; }
     }
 }

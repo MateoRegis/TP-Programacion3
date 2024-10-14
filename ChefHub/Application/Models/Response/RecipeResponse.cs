@@ -15,7 +15,7 @@ namespace Application.Models.Response
 
 
         public int? PreparationTime { get; set; }
-        public Difficulty Difficulty { get; set; }
+        public Difficulty? Difficulty { get; set; }
 
     }
 }
