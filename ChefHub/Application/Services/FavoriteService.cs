@@ -1,5 +1,7 @@
 ﻿using System.Net;
 using Application.Interfaces;
+using Application.Mappings;
+using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
 using Domain.Enum;
@@ -10,39 +12,49 @@ namespace Application.Services
 {
     public class FavoriteService : IFavoriteService
     {
-        private readonly IFavoriteService _favoriteService;
         private readonly IRepositoryBase<Favorite> _repositoryBaseFavorite;
         private readonly IRepositoryBase<User> _repositoryBaseUser;
         private readonly IFavoriteRepository _favoriteRepository;
-        public FavoriteService(IFavoriteService favoriteService, IRepositoryBase<Favorite> repositoryBaseFavorite, IRepositoryBase<User> repositoryBaseUser, IFavoriteRepository favoriteRepository)
+        private readonly FavoriteMapping _favoriteMapping;
+        private readonly RecipeMapping _recipeMapping;
+        public FavoriteService(IRepositoryBase<Favorite> repositoryBaseFavorite, IRepositoryBase<User> repositoryBaseUser, IFavoriteRepository favoriteRepository, FavoriteMapping favoriteMapping, RecipeMapping recipeMapping)
         {
-            _favoriteService = favoriteService;
             _repositoryBaseFavorite = repositoryBaseFavorite;
             _repositoryBaseUser = repositoryBaseUser;
             _favoriteRepository = favoriteRepository;
+            _favoriteMapping = favoriteMapping;
+            _recipeMapping = recipeMapping;
         }
 
-        public async Task AddToFavorites(int userId, int recipeId, FavoriteType favoriteType)
+        public async Task AddToFavorites(int userId, FavoriteRequest favoriteRequest)
         {
-            var recipeExist = await _repositoryBaseFavorite.GetByIdAsync(recipeId);
-            if (recipeExist == null)
+            var recipeExist = await _repositoryBaseFavorite.EntityExistsAsync(favoriteRequest.RecipeId);
+            if (!recipeExist)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             };
-            var user = await _repositoryBaseUser.GetByIdAsync(userId);
-            if (user == null)
+
+            var userExists = await _repositoryBaseUser.EntityExistsAsync(userId);
+            if (!userExists)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Usuario no encontrado.");
             };
-            
-            var response = await _repositoryBaseFavorite.AddAsync(recipeExist);
 
+            var favoriteExists = Enum.IsDefined(typeof(FavoriteType), favoriteRequest.FavoriteType);
+            if (!favoriteExists)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Tipo de favorito no encontrado.");
+            };
 
+            var entity = _favoriteMapping.FromRequestToEntity(userId, favoriteRequest);
+            await _repositoryBaseFavorite.AddAsync(entity);
         }
 
-        public Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType)
+        public async Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType)
         {
-            throw new NotImplementedException();
+            var favorite = await _favoriteRepository.GetFavoriteRecipesByUserAndType(userId, favoriteType);
+            var response = favorite.Select(f => _recipeMapping.FromEntityToResponse(f)).ToList();
+            return response;
         }
     }
 }
