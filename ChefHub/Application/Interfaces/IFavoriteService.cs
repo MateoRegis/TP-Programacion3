@@ -7,6 +7,8 @@ namespace Application.Interfaces
     public interface IFavoriteService
     {
         Task AddToFavorites(int userId, FavoriteRequest favoriteRequest);  
+        Task DeleteFavorite(int userId, int favoriteId);
+        Task ModifyFavorite(int userId, int favoriteId, FavoriteRequest favoriteRequest);
         Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType);
     }
 }

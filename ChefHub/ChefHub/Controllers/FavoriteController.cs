@@ -38,6 +38,51 @@ namespace Web.Controllers
             }
         }
 
+        [HttpDelete("{favoriteId}")]
+        public async Task<IActionResult> DeleteFavorite([FromRoute] int favoriteId)
+        {
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+                if (userIdClaim == null)
+                {
+                    return Unauthorized(new { success = false, message = "Usuario no autorizado" });
+                }
+                await _favoriteService.DeleteFavorite(int.Parse(userIdClaim), favoriteId);
+                return NoContent();
+            }
+            catch (NotFoundException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+            catch (NotAllowedException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+        }
+
+        [HttpPut("{favoriteId}")]
+        public async Task<IActionResult> ModifyFavorite([FromRoute] int favoriteId, [FromBody] FavoriteRequest request)
+        {
+            try {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+                if (userIdClaim == null)
+                {
+                    return Unauthorized(new { success = false, message = "Usuario no autorizado" });
+                }
+                await _favoriteService.ModifyFavorite(int.Parse(userIdClaim), favoriteId, request);
+                return NoContent();
+            }
+            catch (NotFoundException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+            catch (NotAllowedException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+        }
+
         [HttpGet("[Action]")]
         public async Task<IActionResult> GetFavoriteRecipesByUserAndType([FromQuery] FavoriteType favoriteType)
         {

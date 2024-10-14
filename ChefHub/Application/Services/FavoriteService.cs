@@ -52,6 +52,35 @@ namespace Application.Services
             await _repositoryBaseFavorite.AddAsync(entity);
         }
 
+        public async Task DeleteFavorite(int userId, int favoriteId)
+        {
+            var favoriteExists = await _repositoryBaseFavorite.GetByIdAsync(favoriteId);
+            if (favoriteExists == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Favorito no encontrado.");
+            }
+            if (favoriteExists.UserId != userId)
+            {
+                throw new NotAllowedException(HttpStatusCode.Forbidden, "Favorito no pertenece al usuario");
+            }
+            await _repositoryBaseFavorite.DeleteAsync(favoriteExists);
+        }
+
+        public async Task ModifyFavorite(int userId, int favoriteId, FavoriteRequest favoriteRequest)
+        {
+            var favoriteExists = await _repositoryBaseFavorite.GetByIdAsync(favoriteId);
+            if (favoriteExists == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Favorito no encontrado.");
+            }
+            if (favoriteExists.UserId != userId)
+            {
+                throw new NotAllowedException(HttpStatusCode.Forbidden, "Favorito no pertenece al usuario");
+            }
+            favoriteExists.FavoriteType = favoriteRequest.FavoriteType;
+            await _repositoryBaseFavorite.UpdateAsync(favoriteExists);
+        }
+
         public async Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType)
         {
             var favorite = await _favoriteRepository.GetFavoriteRecipesByUserAndType(userId, favoriteType);
