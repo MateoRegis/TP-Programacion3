@@ -7,6 +7,7 @@
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
         Task<T?> GetByIdAsync<TId>(TId id) where TId : notnull;
+        Task<bool> EntityExistsAsync<TId>(TId id) where TId : notnull;
 
     }
 }
