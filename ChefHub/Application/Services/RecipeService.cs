@@ -14,7 +14,7 @@ namespace Application.Services
         private readonly IRepositoryBase<Recipe> _repositoryBaseRecipe;
         private readonly RecipeMapping _recipeMapping;
         private readonly IRecipeRepository _recipeRepository;
- 
+
         public RecipeService(IRepositoryBase<Recipe> repositoryBase, RecipeMapping recipeMapping, IRecipeRepository recipeRepository)
         {
             _repositoryBaseRecipe = repositoryBase;
@@ -33,26 +33,23 @@ namespace Application.Services
 
         public async Task ModifyRecipe(RecipeRequest request, int recipeId, int userId)
         {
-            var recipeExists = await _repositoryBaseRecipe.GetByIdAsync(recipeId);
+            var recipeExists = await _recipeRepository.GetRecipeById(userId, recipeId);
             if (recipeExists == null)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             }
-            if (recipeExists.UserId != userId)
-            {
-                throw new NotAllowedException(HttpStatusCode.Forbidden, "Receta no pertenece al usuario.");
-            }
-            recipeExists = _recipeMapping.FromResponseToEntityMapped(request, recipeExists);
-            await _repositoryBaseRecipe.UpdateAsync(recipeExists);
+
+            var recipeMapped = _recipeMapping.FromResponseToEntityMapped(request, recipeExists);
+            await _repositoryBaseRecipe.UpdateAsync(recipeMapped);
         }
 
         public async Task<List<RecipeResponse>> GetRecipesByUser(int userId)
         {
             var response = await _recipeRepository.GetRecipesByUser(userId);
-            var responseMapped = response.Select( r => _recipeMapping.FromEntityToResponse(r)).ToList();
+            var responseMapped = response.Select(r => _recipeMapping.FromEntityToResponse(r)).ToList();
             return responseMapped;
         }
-        
+
     }
 }
 

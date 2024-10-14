@@ -47,9 +47,6 @@ namespace ChefHub.Controllers
             {
                 return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });                
             }
-            catch (NotAllowedException ex) {
-                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
-            }
         }
 
 
