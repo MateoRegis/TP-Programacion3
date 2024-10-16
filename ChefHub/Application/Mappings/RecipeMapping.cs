@@ -36,20 +36,22 @@ namespace Application.Mappings
                 Instructions = entity.Instructions,
                 UrlImage = entity.UrlImage,
                 PreparationTime = entity.PreparationTime,
-                Comments = entity.ListComments?.Any() == true ? entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList() : new List<CommentResponse>(), 
+                Comments = entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList(),
+                UserId = entity.UserId,
+
             };
         }
 
         public Recipe? FromResponseToEntityMapped(RecipeRequest request, Recipe recipe)
         {
-            recipe.Title = request.Title?? recipe.Title;
-            recipe.Categories = request.Categories?? recipe.Categories;
-            recipe.Description = request.Description?? recipe.Description;
-            recipe.Difficulty = request.Difficulty?? recipe.Difficulty;
-            recipe.Ingredients = request.Ingredients?? recipe.Ingredients;
-            recipe.Instructions = request.Instructions?? recipe.Instructions;
-            recipe.UrlImage = request.UrlImage?? recipe.UrlImage;
-            recipe.PreparationTime = request.PreparationTime?? recipe.PreparationTime;
+            recipe.Title = request.Title ?? recipe.Title;
+            recipe.Categories = request.Categories ?? recipe.Categories;
+            recipe.Description = request.Description ?? recipe.Description;
+            recipe.Difficulty = request.Difficulty ?? recipe.Difficulty;
+            recipe.Ingredients = request.Ingredients ?? recipe.Ingredients;
+            recipe.Instructions = request.Instructions ?? recipe.Instructions;
+            recipe.UrlImage = request.UrlImage ?? recipe.UrlImage;
+            recipe.PreparationTime = request.PreparationTime ?? recipe.PreparationTime;
             return recipe;
         }
     }

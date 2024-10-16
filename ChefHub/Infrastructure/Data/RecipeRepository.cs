@@ -20,6 +20,12 @@ namespace Infrastructure.Data
         {
             return await _context.Recipes.Include(r => r.ListComments).Where(r => r.UserId == userId && r.Id == recipeId).FirstOrDefaultAsync();
         }
+
+        public async Task<List<Recipe>> GetAllRecipes()
+        {
+            var recipes = await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).ToListAsync();
+            return recipes;
+        }
     }
 
 }
