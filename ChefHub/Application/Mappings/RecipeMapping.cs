@@ -36,7 +36,8 @@ namespace Application.Mappings
                 Instructions = entity.Instructions,
                 UrlImage = entity.UrlImage,
                 PreparationTime = entity.PreparationTime,
-                Comments = entity.ListComments?.Any() == true ? entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList() : new List<CommentResponse>(), 
+                // TODO: Descomentar
+                // Comments = entity.ListComments?.Any() == true ? entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList() : new List<CommentResponse>(), 
             };
         }
 

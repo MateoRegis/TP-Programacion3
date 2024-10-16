@@ -50,6 +50,12 @@ namespace Application.Services
             return responseMapped;
         }
 
+        public async Task<List<RecipeResponse>> GetAllRecipes()
+        {
+            var response = await _recipeRepository.GetAllRecipes();
+            var responseMapped = response.Select(r => _recipeMapping.FromEntityToResponse(r)).ToList();
+            return responseMapped;
+        }
     }
 }
 
