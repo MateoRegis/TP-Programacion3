@@ -1,4 +1,5 @@
 using Application.Interfaces;
+using Domain.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChefHub.Controllers
@@ -12,11 +13,31 @@ namespace ChefHub.Controllers
         {
             _recipeService = recipeService;
         }
-        [HttpPost("[action]")]
+        [HttpGet("[action]")]
         public async Task<ActionResult> GetAllRecipes()
         {
             var response = await _recipeService.GetAllRecipes();
             return Ok(new { success = true, data = response });
+        }
+        [HttpGet("{idRecipe}")]
+
+        public async Task<ActionResult> GetRecipeById([FromRoute] int idRecipe)
+
+        {
+
+            try
+            {
+                var response = await _recipeService.GetRecipeById(idRecipe);
+                return Ok(new { success = true, data = response });
+
+            }
+            catch (NotFoundException ex)
+            {
+
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+
+            }
+
         }
     }
 }

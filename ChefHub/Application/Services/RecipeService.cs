@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Security.Principal;
 using Application.Interfaces;
 using Application.Mappings;
 using Application.Models.Request;
@@ -56,6 +57,20 @@ namespace Application.Services
             var responseMapped = response.Select(r => _recipeMapping.FromEntityToResponse(r)).ToList();
             return responseMapped;
         }
+        public async Task<RecipeResponse> GetRecipeById(int idRecipe)
+        {
+            var response = await _recipeRepository.GetRecipeById(idRecipe);
+            if (response == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "No Se Encontro La Receta");
+            }
+            var responseMapped = _recipeMapping.FromEntityToResponse(response);
+            return responseMapped;
+        }
+
+
+
+
     }
 }
 
