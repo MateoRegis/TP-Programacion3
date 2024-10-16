@@ -26,6 +26,11 @@ namespace Infrastructure.Data
             var recipes = await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).ToListAsync();
             return recipes;
         }
+
+        public async Task<Recipe?> GetRecipeById(int recipeId)
+        {
+            return await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.Id == recipeId).FirstOrDefaultAsync();
+        }
     }
 
 }

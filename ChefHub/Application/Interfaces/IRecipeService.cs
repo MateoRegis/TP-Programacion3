@@ -9,5 +9,6 @@ namespace Application.Interfaces
         Task ModifyRecipe(RecipeRequest request, int recipeId, int userId);
         Task<List<RecipeResponse>> GetRecipesByUser(int userId);
         Task<List<RecipeResponse>> GetAllRecipes();
+        Task<RecipeResponse> GetRecipeById(int idRecipe);
     }
 }
