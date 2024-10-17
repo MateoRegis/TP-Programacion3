@@ -48,7 +48,7 @@ namespace Infrastructure.Services
             return tokenToReturn.ToString();
         }
 
-        public async Task<User?> ValidateUserAsync(AuthRequest request)
+        private async Task<User?> ValidateUserAsync(AuthRequest request)
         {
             if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
             {

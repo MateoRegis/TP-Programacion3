@@ -9,7 +9,6 @@ namespace ChefHub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class RecipeController : ControllerBase
     {
         private readonly IRecipeService _recipeService;
@@ -18,6 +17,7 @@ namespace ChefHub.Controllers
             _recipeService = recipeService;
         }
         [HttpPost("[action]")]
+        [Authorize]
         public async Task<ActionResult> CreateRecipe(RecipeRequest request)
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -30,6 +30,7 @@ namespace ChefHub.Controllers
         }
 
         [HttpPut("{recipeId}")]
+        [Authorize]
         public async Task<ActionResult> ModifyRecipe([FromBody] RecipeRequest request, [FromRoute] int recipeId)
         {
             try
@@ -49,8 +50,29 @@ namespace ChefHub.Controllers
             }
         }
 
+        [HttpDelete("{recipeId}")]
+        [Authorize]
+        public async Task<ActionResult> DeleteRecipe([FromRoute] int recipeId)
+        {
+            try
+            {
+                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+                if (userIdClaim == null)
+                {
+                    return Unauthorized(new { success = false, message = "Usuario no autorizado" });
+                }
+                await _recipeService.DeleteRecipe(recipeId, int.Parse(userIdClaim));
+                return NoContent();
+            }
+            catch(NotFoundException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+        }
+
 
         [HttpGet("[action]")]
+        [Authorize]
         public async Task<ActionResult> GetRecipesByUser()
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -62,6 +84,31 @@ namespace ChefHub.Controllers
             return Ok(new { success = true, data = response });
         }
 
+        [HttpGet("[action]")]
+        public async Task<ActionResult> GetAllRecipes()
+        {
+            var response = await _recipeService.GetAllRecipes();
+            return Ok(new { success = true, data = response });
+        }
+        [HttpGet("{idRecipe}")]
+
+        public async Task<ActionResult> GetRecipeById([FromRoute] int idRecipe)
+        {
+
+            try
+            {
+                var response = await _recipeService.GetRecipeById(idRecipe);
+                return Ok(new { success = true, data = response });
+
+            }
+            catch (NotFoundException ex)
+            {
+
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+
+            }
+
+        }
     }
 
 }

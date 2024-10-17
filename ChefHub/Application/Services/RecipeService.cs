@@ -44,6 +44,16 @@ namespace Application.Services
             await _repositoryBaseRecipe.UpdateAsync(recipeMapped);
         }
 
+        public async Task DeleteRecipe(int recipeId, int userId)
+        {
+            var recipeExists = await _recipeRepository.GetRecipeById(userId, recipeId);
+            if (recipeExists == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
+            }
+            await _repositoryBaseRecipe.DeleteAsync(recipeExists);
+        }
+
         public async Task<List<RecipeResponse>> GetRecipesByUser(int userId)
         {
             var response = await _recipeRepository.GetRecipesByUser(userId);
