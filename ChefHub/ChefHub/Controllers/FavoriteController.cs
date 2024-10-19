@@ -94,5 +94,12 @@ namespace Web.Controllers
             var response = await _favoriteService.GetFavoritesByUserAndType(int.Parse(userIdClaim), favoriteType);
             return Ok(new { success = true, data = response });
         }
+
+        [HttpGet("GetAllUserFavorites/{userId}")]
+        public async Task<IActionResult> GetAllUserFavorites([FromRoute] int userId)
+        {
+            var response = await _favoriteService.GetAllUserFavorites(userId);
+            return Ok(new { success = true, data = response });
+        }
     }
 }

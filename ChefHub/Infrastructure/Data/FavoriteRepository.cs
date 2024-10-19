@@ -20,6 +20,13 @@ namespace Infrastructure.Data
                 .ToListAsync();                                                     // Obtener la lista de recetas
         }
 
-
+        public async Task<List<Favorite>> GetAllUserFavorites(int userId)
+        {
+            return await _context.Favorites
+                .Where(f => f.UserId == userId)
+                .Include(f => f.Recipe)
+                .Select(f => f)
+                .ToListAsync();
+        }
     }
 }
