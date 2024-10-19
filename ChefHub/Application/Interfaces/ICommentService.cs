@@ -9,5 +9,6 @@ namespace Application.Interfaces
         Task<CommentResponse> CreateComment(CommentRequest request, int userId);
         Task<List<CommentResponse>> GetCommentsByRecipe(int recipeId);
         Task DeleteComment(int recipeId, int commentId, int userId, Role role);
+        Task ModifyComment(CommentRequest request, int commentId, int userId);
     }
 }

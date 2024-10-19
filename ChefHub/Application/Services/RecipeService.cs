@@ -40,7 +40,7 @@ namespace Application.Services
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             }
 
-            var recipeMapped = _recipeMapping.FromResponseToEntityMapped(request, recipeExists);
+            var recipeMapped = _recipeMapping.FromEntityToEntityUpdated(request, recipeExists);
             await _repositoryBaseRecipe.UpdateAsync(recipeMapped);
         }
 

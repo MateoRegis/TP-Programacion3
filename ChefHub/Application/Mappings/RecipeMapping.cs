@@ -42,7 +42,7 @@ namespace Application.Mappings
             };
         }
 
-        public Recipe? FromResponseToEntityMapped(RecipeRequest request, Recipe recipe)
+        public Recipe? FromEntityToEntityUpdated(RecipeRequest request, Recipe recipe)
         {
             recipe.Title = request.Title ?? recipe.Title;
             recipe.Categories = request.Categories ?? recipe.Categories;
