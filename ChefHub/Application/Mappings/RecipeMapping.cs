@@ -31,7 +31,7 @@ namespace Application.Mappings
                 Title = entity.Title,
                 Categories = entity.Categories,
                 Description = entity.Description,
-                Difficulty = entity.Difficulty,
+                Difficulty = entity.Difficulty.ToString(),
                 Ingredients = entity.Ingredients,
                 Instructions = entity.Instructions,
                 UrlImage = entity.UrlImage,
