@@ -87,5 +87,12 @@ namespace Application.Services
             var response = favorite.Select(f => _recipeMapping.FromEntityToResponse(f)).ToList();
             return response;
         }
+
+        public async Task<List<FavoriteResponse>> GetAllUserFavorites(int userId)
+        {
+            var favorite = await _favoriteRepository.GetAllUserFavorites(userId);
+            var response = favorite.Select(f => _favoriteMapping.FromEntityToResponse(f)).ToList();
+            return response;
+        }
     }
 }

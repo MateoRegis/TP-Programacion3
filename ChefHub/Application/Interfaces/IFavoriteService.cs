@@ -10,5 +10,6 @@ namespace Application.Interfaces
         Task DeleteFavorite(int userId, int favoriteId);
         Task ModifyFavorite(int userId, int favoriteId, FavoriteRequest favoriteRequest);
         Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType);
+        Task<List<FavoriteResponse>> GetAllUserFavorites(int userId);
     }
 }

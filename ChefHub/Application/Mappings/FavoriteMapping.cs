@@ -1,4 +1,5 @@
 using Application.Models.Request;
+using Application.Models.Response;
 using Domain.Entities;
 
 namespace Application.Mappings
@@ -14,6 +15,16 @@ namespace Application.Mappings
                 FavoriteType = favoriteRequest.FavoriteType
             };
             return entity;
+        }
+
+        public FavoriteResponse FromEntityToResponse(Favorite entity)
+        {
+            var mapping = new RecipeMapping();
+            return new FavoriteResponse
+            {
+                Id = entity.Id,
+                RecipeResponse = mapping.FromEntityToResponse(entity.Recipe)
+            };
         }
     }
 }
