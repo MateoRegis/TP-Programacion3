@@ -14,6 +14,5 @@ namespace Infrastructure.Data
         {
             return await _context.Comments.Include(c => c.User).Where(c => c.RecipeId == recipeId).ToListAsync();
         }
-   
     }
 }

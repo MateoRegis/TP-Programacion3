@@ -14,11 +14,6 @@ namespace Application.Mappings
                 Text = request.Text,
                 UserId = userId,
                 RecipeId = request.RecipeId,
-
-
-
-
-
             };
         }
         public CommentResponse FromEntityToResponse(Comment entity)
@@ -30,10 +25,14 @@ namespace Application.Mappings
                 Score = entity.Score,
                 Text = entity.Text,
                 UserResponse = mapping.FromUserToResponse(entity.User)
-
             };
         }
 
-
+        public Comment FromEntityToEntityUpdated(CommentRequest request, Comment comment)
+        {
+            comment.Score = request.Score;
+            comment.Text = request.Text ?? comment.Text;
+            return comment;
+        }
     }
 }

@@ -82,7 +82,24 @@ namespace Application.Services
             return responseMapped;
         }
 
-
-
+        public async Task ModifyComment(CommentRequest request, int commentId, int userId)
+        {
+            var recipeExist = await _repositoryBaseRecipe.GetByIdAsync(request.RecipeId);
+            if (recipeExist == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
+            };
+            var commentExist = await _repositoryBaseComment.GetByIdAsync(commentId);
+            if (commentExist == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Comentario no encontrado.");
+            }
+            if (commentExist.UserId != userId)
+            {
+                throw new NotAllowedException(HttpStatusCode.Forbidden, "Comentario no pertenece al usuario");
+            }
+            var entity = _commentMapping.FromEntityToEntityUpdated(request, commentExist);
+            await _repositoryBaseComment.UpdateAsync(entity);
+        }
     }
 }
