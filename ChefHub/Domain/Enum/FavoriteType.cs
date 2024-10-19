@@ -3,11 +3,15 @@
     public enum FavoriteType
     {
         Normal,
-        Vegan,
-        Vegetarian,
+        Vegana,
+        Vegetariano,
         Keto,
-        GlutenFree,
-        SugarFree,
-        LactoseFree
+        Desayuno,
+        Almuerzo,
+        Merienda,
+        Cena,
+        Picada,
+        Pastas,
+        Pescadosymariscos,
     }
 }
