@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using System.Security.Claims;
+using Application.Interfaces;
 using Application.Models.Request;
 using Application.Models.Response;
 using Microsoft.AspNetCore.Authorization;
@@ -39,6 +40,18 @@ namespace ChefHub.Controllers
                 return BadRequest(new { success = false, message = "Ya existe un usuario con este correo" });
             }
             return Created("", new { success = true, data = response });
+        }
+
+        [HttpPut("[action]")]
+        public async Task<ActionResult> ModifyUser(UserRequest request)
+        {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized(new { success = false, message = "Usuario no autorizado" });
+            }
+            await _userService.ModifyUser(request, int.Parse(userIdClaim));
+            return Ok(new { success = true, message = "Usuario modificado" });
         }
 
     }

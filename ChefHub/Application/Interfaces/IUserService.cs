@@ -8,5 +8,6 @@ namespace Application.Interfaces
         Task<UserResponse> CreateUserAsync(UserRequest request);
         Task<UserResponse?> GetUserById(int id);
         Task<UserResponse?> Register(UserRequest request);
+        Task ModifyUser(UserRequest request, int userId);
     }
 }

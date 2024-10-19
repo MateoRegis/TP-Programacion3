@@ -1,9 +1,11 @@
-﻿using Application.Interfaces;
+﻿using System.Net;
+using Application.Interfaces;
 using Application.Mappings;
 using Application.Models.Request;
 using Application.Models.Response;
 using Domain.Entities;
 using Domain.Enum;
+using Domain.Exceptions;
 using Domain.Interfaces;
 
 namespace Application.Services
@@ -51,6 +53,17 @@ namespace Application.Services
             var response = await _repositoryBase.AddAsync(user);
             var responseMapped = _userMapping.FromUserToResponse(response);
             return responseMapped;
+        }
+
+        public async Task ModifyUser(UserRequest request, int userId)
+        {
+            var user = await _repositoryBase.GetByIdAsync(userId);
+            if (user == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Usuario no encontrado.");
+            }
+            var response =_userMapping.FromEntityToEntityUpdated(request, user);
+            await _repositoryBase.UpdateAsync(response);
         }
     }
 }
