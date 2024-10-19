@@ -30,9 +30,15 @@ namespace Application.Mappings
                 Description = entity.Description,
                 TipoRol = entity.TipoRol.ToString(),
             };
-
         }
 
-
+        public User? FromEntityToEntityUpdated(UserRequest request, User entity)
+        {
+            entity.FullName = request.FullName ?? entity.FullName;
+            entity.Email = request.Email ?? entity.Email;
+            entity.UrlPhoto = request.UrlPhoto ?? entity.UrlPhoto;
+            entity.Description = request.Description ?? entity.Description;
+            return entity;
+        }
     }
 }
