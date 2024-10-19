@@ -7,5 +7,6 @@ namespace Domain.Interfaces
     {
         Task<List<Recipe>> GetFavoriteRecipesByUserAndType(int userId, FavoriteType favoriteType);
         Task<List<Favorite>> GetAllUserFavorites(int userId);
+        Task<List<Favorite>> GetFavoritesByRecipe(int recipeId);
     }
 }

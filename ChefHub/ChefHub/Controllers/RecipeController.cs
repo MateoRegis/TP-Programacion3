@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using Application.Interfaces;
 using Application.Models.Request;
+using Domain.Enum;
 using Domain.Exceptions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -61,7 +62,8 @@ namespace ChefHub.Controllers
                 {
                     return Unauthorized(new { success = false, message = "Usuario no autorizado" });
                 }
-                await _recipeService.DeleteRecipe(recipeId, int.Parse(userIdClaim));
+                var userRoleClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+                await _recipeService.DeleteRecipe(recipeId, int.Parse(userIdClaim), Enum.Parse<Role>(userRoleClaim));
                 return NoContent();
             }
             catch(NotFoundException ex)
