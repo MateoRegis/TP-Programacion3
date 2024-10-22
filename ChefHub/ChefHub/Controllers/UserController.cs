@@ -16,7 +16,6 @@ namespace ChefHub.Controllers
         {
             _userService = userService;
         }
-        [Authorize]
         [HttpGet("{idUser}")]
         public async Task<ActionResult<UserResponse>> GetUserById([FromRoute]int idUser)
         {
@@ -43,6 +42,7 @@ namespace ChefHub.Controllers
         }
 
         [HttpPut("[action]")]
+        [Authorize]
         public async Task<ActionResult> ModifyUser(UserRequest request)
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;

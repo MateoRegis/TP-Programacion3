@@ -11,7 +11,7 @@ namespace ChefHub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
+    [Authorize]
     public class CommentController : ControllerBase
     {
         private readonly ICommentService _commentService;
@@ -21,7 +21,6 @@ namespace ChefHub.Controllers
             _commentService = commentService;
         }
 
-        [Authorize]
         [HttpPost("[action]")]
 
         public async Task<ActionResult> CreateComment([FromBody] CommentRequest request)
@@ -49,7 +48,6 @@ namespace ChefHub.Controllers
 
 
         }
-        [Authorize]
         [HttpDelete("{commentId}")]
         public async Task<ActionResult> DeleteComment([FromRoute] int commentId, [FromQuery] int recipeId)
         {
@@ -73,7 +71,6 @@ namespace ChefHub.Controllers
             }
         }
 
-        [Authorize]
         [HttpPut("{commentId}")]
         public async Task<ActionResult> ModifyComment([FromBody] CommentRequest request, [FromRoute] int commentId)
         {
