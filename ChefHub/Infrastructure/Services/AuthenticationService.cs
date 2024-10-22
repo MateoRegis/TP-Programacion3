@@ -34,7 +34,8 @@ namespace Infrastructure.Services
             {
                 new Claim("sub",user.Id.ToString()),
                 new Claim("fullName",user.FullName),
-                new Claim("role",user.TipoRol.ToString())
+                new Claim("photo",user.UrlPhoto),
+                new Claim("role",user.TipoRol.ToString())           
             };
             var jwtSecurityToken = new JwtSecurityToken(
                 _options.Issuer,

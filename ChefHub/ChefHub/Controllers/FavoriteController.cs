@@ -4,6 +4,7 @@ using Application.Models.Request;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Enum;
 using Domain.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Web.Controllers
 {
@@ -19,6 +20,7 @@ namespace Web.Controllers
         }
 
         [HttpPost("[Action]")]
+        [Authorize]
         public async Task<IActionResult> AddToFavorites([FromBody] FavoriteRequest request)
         {
             try
@@ -39,6 +41,7 @@ namespace Web.Controllers
         }
 
         [HttpDelete("{favoriteId}")]
+        [Authorize]
         public async Task<IActionResult> DeleteFavorite([FromRoute] int favoriteId)
         {
             try
@@ -62,6 +65,7 @@ namespace Web.Controllers
         }
 
         [HttpPut("{favoriteId}")]
+        [Authorize]
         public async Task<IActionResult> ModifyFavorite([FromRoute] int favoriteId, [FromBody] FavoriteRequest request)
         {
             try {
@@ -84,6 +88,7 @@ namespace Web.Controllers
         }
 
         [HttpGet("[Action]")]
+        [Authorize]
         public async Task<IActionResult> GetFavoriteRecipesByUserAndType([FromQuery] FavoriteType favoriteType)
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;

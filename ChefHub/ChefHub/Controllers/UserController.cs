@@ -16,11 +16,10 @@ namespace ChefHub.Controllers
         {
             _userService = userService;
         }
-        [Authorize]
-        [HttpGet("[action]")]
-        public async Task<ActionResult<UserResponse>> GetUserById(int id)
+        [HttpGet("{idUser}")]
+        public async Task<ActionResult<UserResponse>> GetUserById([FromRoute]int idUser)
         {
-            var response = await _userService.GetUserById(id);
+            var response = await _userService.GetUserById(idUser);
             if (response == null)
             {
                 return NotFound(new { success = false, message = "No se encontró un usuario con ese id" });
@@ -43,6 +42,7 @@ namespace ChefHub.Controllers
         }
 
         [HttpPut("[action]")]
+        [Authorize]
         public async Task<ActionResult> ModifyUser(UserRequest request)
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;

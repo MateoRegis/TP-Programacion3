@@ -43,11 +43,11 @@ namespace ChefHub.Controllers
                 }
                 await _recipeService.ModifyRecipe(request, recipeId, int.Parse(userIdClaim));
                 return Ok(new { success = true, message = "Receta modificada" });
-                
+
             }
             catch (NotFoundException ex)
             {
-                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });                
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
         }
 
@@ -66,23 +66,21 @@ namespace ChefHub.Controllers
                 await _recipeService.DeleteRecipe(recipeId, int.Parse(userIdClaim), Enum.Parse<Role>(userRoleClaim));
                 return NoContent();
             }
-            catch(NotFoundException ex)
+            catch (NotFoundException ex)
+            {
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
+            }
+            catch (NotAllowedException ex)
             {
                 return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
         }
 
 
-        [HttpGet("[action]")]
-        [Authorize]
-        public async Task<ActionResult> GetRecipesByUser()
+        [HttpGet("GetRecipesByUser/{idUser}")]
+        public async Task<ActionResult> GetRecipesByUser([FromRoute] int idUser)
         {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
-            if (userIdClaim == null)
-            {
-                return Unauthorized(new { success = false, message = "Usuario no autorizado" });
-            }
-            var response = await _recipeService.GetRecipesByUser(int.Parse(userIdClaim));
+            var response = await _recipeService.GetRecipesByUser(idUser);
             return Ok(new { success = true, data = response });
         }
 
@@ -92,8 +90,7 @@ namespace ChefHub.Controllers
             var response = await _recipeService.GetAllRecipes();
             return Ok(new { success = true, data = response });
         }
-        [HttpGet("{idRecipe}")]
-
+        [HttpGet("GetRecipeById/{idRecipe}")]
         public async Task<ActionResult> GetRecipeById([FromRoute] int idRecipe)
         {
 

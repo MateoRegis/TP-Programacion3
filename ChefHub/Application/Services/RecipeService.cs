@@ -55,7 +55,7 @@ namespace Application.Services
 
         public async Task DeleteRecipe(int recipeId, int userId, Role role)
         {   
-            var recipeExists = await _recipeRepository.GetRecipeById(userId, recipeId);
+            var recipeExists = await _repositoryBaseRecipe.GetByIdAsync(recipeId);
             if (recipeExists == null)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
