@@ -29,7 +29,7 @@ namespace Application.Mappings
                 UrlPhoto = entity.UrlPhoto,
                 Description = entity.Description,
                 TipoRol = entity.TipoRol.ToString(),
-            };
+            }; 
         }
 
         public User? FromEntityToEntityUpdated(UserRequest request, User entity)

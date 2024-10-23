@@ -15,5 +15,8 @@ namespace Domain.Entities
         public int? PreparationTime { get; set; }
         public Difficulty? Difficulty { get; set; }
         public int UserId { get; set; }
+
+        public User? User { get; set; }
+
     }
 }

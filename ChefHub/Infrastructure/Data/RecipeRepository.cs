@@ -12,24 +12,24 @@ namespace Infrastructure.Data
 
         public async Task<List<Recipe>> GetRecipesByUser(int userId)
         {
-            var recipes = await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.UserId == userId).ToListAsync();
+            var recipes = await _context.Recipes.Include(r => r.User).Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.UserId == userId).ToListAsync();
             return recipes;
 
         }
         public async Task<Recipe?> GetRecipeById(int userId, int recipeId)
         {
-            return await _context.Recipes.Include(r => r.ListComments).Where(r => r.UserId == userId && r.Id == recipeId).FirstOrDefaultAsync();
+            return await _context.Recipes.Include(r => r.User).Include(r => r.ListComments).Where(r => r.UserId == userId && r.Id == recipeId).FirstOrDefaultAsync();
         }
 
         public async Task<List<Recipe>> GetAllRecipes()
         {
-            var recipes = await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).ToListAsync();
+            var recipes = await _context.Recipes.Include(r => r.User).Include(r => r.ListComments).ThenInclude(c => c.User).ToListAsync();
             return recipes;
         }
 
         public async Task<Recipe?> GetRecipeById(int recipeId)
         {
-            return await _context.Recipes.Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.Id == recipeId).FirstOrDefaultAsync();
+            return await _context.Recipes.Include(r => r.User).Include(r => r.ListComments).ThenInclude(c => c.User).Where(r => r.Id == recipeId).FirstOrDefaultAsync();
         }
     }
 

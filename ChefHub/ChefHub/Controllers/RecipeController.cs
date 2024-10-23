@@ -10,7 +10,7 @@ namespace ChefHub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RecipeController : ControllerBase
+    public class RecipeController : ControllerBase    
     {
         private readonly IRecipeService _recipeService;
         public RecipeController(IRecipeService recipeService)
@@ -90,6 +90,8 @@ namespace ChefHub.Controllers
             var response = await _recipeService.GetAllRecipes();
             return Ok(new { success = true, data = response });
         }
+
+
         [HttpGet("GetRecipeById/{idRecipe}")]
         public async Task<ActionResult> GetRecipeById([FromRoute] int idRecipe)
         {

@@ -12,11 +12,9 @@ namespace Application.Models.Response
         public string? UrlImage { get; set; }
         public List<string>? Categories { get; set; }
         public List<CommentResponse> Comments { get; set; } = new List<CommentResponse>();
-
-
         public int? PreparationTime { get; set; }
         public string? Difficulty { get; set; }
-        public int UserId { get; set; }
+        public UserResponse? UserResponse { get; set; }  
 
     }
 }

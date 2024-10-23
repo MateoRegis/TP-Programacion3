@@ -1,10 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|c:\\users\\de\\desktop\\repo github\\repo github\\tpprogra3\\tp-programacion3\\chefhub\\chefhub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\chefhub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|solutionrelative:chefhub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|solutionrelative:chefhub\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\infrastructure\\data\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\application\\services\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\services\\recipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\chefhub\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2143B2-EF46-404F-9C6A-BD78AC1EC4FD}|ChefHub\\Web.csproj|solutionrelative:chefhub\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\application\\models\\response\\reciperesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\models\\response\\reciperesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\application\\mappings\\recipemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0100D585-C9AC-4322-BCD9-A9F658BBC4AA}|Application\\Application.csproj|solutionrelative:application\\mappings\\recipemapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5321EEB-FA19-4811-87A4-B1B496FF3BD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{995266A6-D8A0-4557-8130-9B71568D7646}|Domain\\Domain.csproj|c:\\users\\usuario\\onedrive\\escritorio\\tpprogramcion3\\tp-programacion3\\chefhub\\domain\\entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{995266A6-D8A0-4557-8130-9B71568D7646}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -38,15 +74,158 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:28:55.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ChefHub\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ChefHub\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAjwA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:26:13.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20241023231439_Agregamos propiedad User a la entidad Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20241023231439_Agregamos propiedad User a la entidad Recipe.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:14:39.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RecipeResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Models\\Response\\RecipeResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Models\\Response\\RecipeResponse.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Models\\Response\\RecipeResponse.cs",
+              "RelativeToolTip": "Application\\Models\\Response\\RecipeResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:09:48.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RecipeMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Mappings\\RecipeMapping.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\RecipeMapping.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Mappings\\RecipeMapping.cs",
+              "RelativeToolTip": "Application\\Mappings\\RecipeMapping.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAD4vx0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:08:02.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RecipeService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Services\\RecipeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\RecipeService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Services\\RecipeService.cs",
+              "RelativeToolTip": "Application\\Services\\RecipeService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAnwFkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:03:39.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\RepositoryBase.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\RepositoryBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:06:26.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Entities\\Recipe.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Recipe.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Domain\\Entities\\Recipe.cs",
+              "RelativeToolTip": "Domain\\Entities\\Recipe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:05:35.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Program.cs",
               "RelativeDocumentMoniker": "ChefHub\\Program.cs",
-              "ToolTip": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\ChefHub\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Program.cs",
               "RelativeToolTip": "ChefHub\\Program.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAAGkAAAAAAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAAEgAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T19:45:40.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Mappings\\UserMapping.cs",
+              "RelativeDocumentMoniker": "Application\\Mappings\\UserMapping.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Application\\Mappings\\UserMapping.cs",
+              "RelativeToolTip": "Application\\Mappings\\UserMapping.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAowBcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:18:14.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\Infrastructure\\Data\\RecipeRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\RecipeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:04:07.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "ChefHub\\Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Tpprogramcion3\\TP-Programacion3\\ChefHub\\ChefHub\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "ChefHub\\Controllers\\RecipeController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAIwFIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T23:03:07.895Z",
               "EditorCaption": ""
             }
           ]
