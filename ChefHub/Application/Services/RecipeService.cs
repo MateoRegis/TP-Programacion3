@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using System.Security.Principal;
 using Application.Interfaces;
 using Application.Mappings;
 using Application.Models.Request;
@@ -20,7 +19,6 @@ namespace Application.Services
         private readonly IFavoriteRepository _favoriteRepository;
         private readonly IRepositoryBase<Comment> _repositoryBaseComment;
         private readonly ICommentRepository _commentRepository;
-
         public RecipeService(IRepositoryBase<Recipe> repositoryBase, RecipeMapping recipeMapping, IRecipeRepository recipeRepository, IRepositoryBase<Favorite> repositoryBaseFavorite, IFavoriteRepository favoriteRepository, IRepositoryBase<Comment> repositoryBaseComment, ICommentRepository commentRepository)
         {
             _repositoryBaseRecipe = repositoryBase;
@@ -31,7 +29,6 @@ namespace Application.Services
             _repositoryBaseComment = repositoryBaseComment;
             _commentRepository = commentRepository;
         }
-
         public async Task<RecipeResponse> CreateRecipe(RecipeRequest request, int userId)
         {
             var entity = _recipeMapping.FromRequestToEntity(request, userId);
@@ -40,7 +37,6 @@ namespace Application.Services
 
             return responseMapped;
         }
-
         public async Task ModifyRecipe(RecipeRequest request, int recipeId, int userId)
         {
             var recipeExists = await _recipeRepository.GetRecipeById(userId, recipeId);
@@ -60,7 +56,6 @@ namespace Application.Services
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             }
-
             if (role == Role.Common)
             {
                 if (recipeExists.UserId != userId)
@@ -68,7 +63,6 @@ namespace Application.Services
                     throw new NotAllowedException(HttpStatusCode.Forbidden, "Receta no pertenece al usuario");
                 }
             }
-
             var favorites = await _favoriteRepository.GetFavoritesByRecipe(recipeId);
             foreach (var favorite in favorites)
             {
@@ -80,17 +74,14 @@ namespace Application.Services
             {
                 await _repositoryBaseComment.DeleteAsync(comment);
             }
-
             await _repositoryBaseRecipe.DeleteAsync(recipeExists);
         }
-
         public async Task<List<RecipeResponse>> GetRecipesByUser(int userId)
         {
             var response = await _recipeRepository.GetRecipesByUser(userId);
             var responseMapped = response.Select(r => _recipeMapping.FromEntityToResponse(r)).ToList();
             return responseMapped;
         }
-
         public async Task<List<RecipeResponse>> GetAllRecipes()
         {
             var response = await _recipeRepository.GetAllRecipes();

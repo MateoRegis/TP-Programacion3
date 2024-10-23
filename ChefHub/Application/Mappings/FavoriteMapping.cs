@@ -16,7 +16,6 @@ namespace Application.Mappings
             };
             return entity;
         }
-
         public FavoriteResponse FromEntityToResponse(Favorite entity)
         {
             var mapping = new RecipeMapping();

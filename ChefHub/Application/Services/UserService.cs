@@ -21,14 +21,12 @@ namespace Application.Services
             _userMapping = userMapping;
             _userRepository = userRepository;
         }
-
         public async Task<UserResponse> CreateUserAsync(UserRequest request)
         {
             var user = _userMapping.FromRequestToEntity(request);
             var entity = await _repositoryBase.AddAsync(user);
             return _userMapping.FromUserToResponse(entity);
         }
-
         public async Task<UserResponse?> GetUserById(int id)
         {
             var entity = await _repositoryBase.GetByIdAsync(id);
@@ -39,7 +37,6 @@ namespace Application.Services
             var response = _userMapping.FromUserToResponse(entity);
             return response;
         }
-
         public async Task<UserResponse?> Register(UserRequest request)
         {
             var exist = await _userRepository.GetUserByUserEmail(request.Email);
@@ -54,7 +51,6 @@ namespace Application.Services
             var responseMapped = _userMapping.FromUserToResponse(response);
             return responseMapped;
         }
-
         public async Task ModifyUser(UserRequest request, int userId)
         {
             var user = await _repositoryBase.GetByIdAsync(userId);

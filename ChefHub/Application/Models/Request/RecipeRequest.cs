@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using Domain.Enum;
+﻿using Domain.Enum;
 
 namespace Application.Models.Request
 {

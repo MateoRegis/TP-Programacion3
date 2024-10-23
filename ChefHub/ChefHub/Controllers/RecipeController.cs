@@ -76,7 +76,6 @@ namespace ChefHub.Controllers
             }
         }
 
-
         [HttpGet("GetRecipesByUser/{idUser}")]
         public async Task<ActionResult> GetRecipesByUser([FromRoute] int idUser)
         {
@@ -90,7 +89,6 @@ namespace ChefHub.Controllers
             var response = await _recipeService.GetAllRecipes();
             return Ok(new { success = true, data = response });
         }
-
 
         [HttpGet("GetRecipeById/{idRecipe}")]
         public async Task<ActionResult> GetRecipeById([FromRoute] int idRecipe)
@@ -108,8 +106,6 @@ namespace ChefHub.Controllers
                 return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
 
             }
-
         }
     }
-
 }

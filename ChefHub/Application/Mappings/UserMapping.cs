@@ -17,7 +17,6 @@ namespace Application.Mappings
                 Description = request.Description,
                 TipoRol = request.TipoRol,
             };
-
         }
         public UserResponse FromUserToResponse(User entity)
         {
@@ -31,7 +30,6 @@ namespace Application.Mappings
                 TipoRol = entity.TipoRol.ToString(),
             }; 
         }
-
         public User? FromEntityToEntityUpdated(UserRequest request, User entity)
         {
             entity.FullName = request.FullName ?? entity.FullName;

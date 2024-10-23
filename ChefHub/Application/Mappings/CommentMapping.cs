@@ -27,7 +27,6 @@ namespace Application.Mappings
                 UserResponse = mapping.FromUserToResponse(entity.User)
             };
         }
-
         public Comment FromEntityToEntityUpdated(CommentRequest request, Comment comment)
         {
             comment.Score = request.Score;

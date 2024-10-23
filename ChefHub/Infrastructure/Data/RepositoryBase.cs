@@ -6,7 +6,6 @@ namespace Infrastructure.Data
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         private readonly DbContext _context;
-
         public RepositoryBase(DbContext context)
         {
             _context = context;
@@ -37,7 +36,6 @@ namespace Infrastructure.Data
         {
             return await _context.Set<T>().FindAsync(new object[] { id });
         }
-
         public virtual async Task<bool> EntityExistsAsync<TId>(TId id) where TId : notnull
         {
             var entity = await _context.Set<T>().FindAsync(new object[] { id });

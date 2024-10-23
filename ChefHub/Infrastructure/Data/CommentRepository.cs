@@ -9,7 +9,6 @@ namespace Infrastructure.Data
         public CommentRepository(ApplicationDbContext context) : base(context)
         {
         }
-
         public async Task<List<Comment>> GetCommentsByRecipe(int recipeId)
         {
             return await _context.Comments.Include(c => c.User).Where(c => c.RecipeId == recipeId).ToListAsync();

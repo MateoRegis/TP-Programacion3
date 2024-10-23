@@ -11,7 +11,6 @@ namespace Domain.Exceptions
             Code = code;
             Msg = msg;
         }
-
         public NotAllowedException(string? message) : base(message)
         {
         }

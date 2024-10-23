@@ -1,6 +1,4 @@
-﻿
-
-namespace Application.Models.Response
+﻿namespace Application.Models.Response
 {
     public class CommentResponse
     {
@@ -8,6 +6,5 @@ namespace Application.Models.Response
         public string? Text { get; set; }
         public int Score { get; set; }
         public UserResponse?  UserResponse { get; set; }
-
     }
 }

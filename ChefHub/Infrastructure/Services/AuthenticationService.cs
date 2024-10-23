@@ -14,13 +14,11 @@ namespace Infrastructure.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly AuthenticationServiceOptions _options;
-
         public AuthenticationService(IUserRepository userRepository, IOptions<AuthenticationServiceOptions> options)
         {
             _userRepository = userRepository;
             _options = options.Value;
         }
-
         public async Task<string> Authenticate(AuthRequest request)
         {
             var user = await ValidateUserAsync(request);
@@ -48,7 +46,6 @@ namespace Infrastructure.Services
             var tokenToReturn = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
             return tokenToReturn.ToString();
         }
-
         private async Task<User?> ValidateUserAsync(AuthRequest request)
         {
             if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
@@ -67,7 +64,6 @@ namespace Infrastructure.Services
             return null;
         }
     }
-
     public class AuthenticationServiceOptions
     {
         public const string Authentication = "AuthenticationService";

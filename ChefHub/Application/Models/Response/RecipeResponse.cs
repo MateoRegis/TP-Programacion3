@@ -1,6 +1,4 @@
-﻿using Domain.Enum;
-
-namespace Application.Models.Response
+﻿namespace Application.Models.Response
 {
     public class RecipeResponse
     {
@@ -15,6 +13,5 @@ namespace Application.Models.Response
         public int? PreparationTime { get; set; }
         public string? Difficulty { get; set; }
         public UserResponse? UserResponse { get; set; }  
-
     }
 }

@@ -13,12 +13,10 @@ namespace Web.Controllers
     public class FavoriteController : ControllerBase
     {   
         private readonly IFavoriteService _favoriteService;
-
         public FavoriteController(IFavoriteService favoriteService)
         {
             _favoriteService = favoriteService;
         }
-
         [HttpPost("[Action]")]
         [Authorize]
         public async Task<IActionResult> AddToFavorites([FromBody] FavoriteRequest request)
