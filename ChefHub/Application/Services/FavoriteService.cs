@@ -70,10 +70,24 @@ namespace Application.Services
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Favorito no encontrado.");
             }
+
             if (favoriteExists.UserId != userId)
             {
                 throw new NotAllowedException(HttpStatusCode.Forbidden, "Favorito no pertenece al usuario");
             }
+
+            var recipeExists = await _repositoryBaseRecipe.GetByIdAsync(favoriteRequest.RecipeId);
+            if (recipeExists == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
+            }
+
+            var favoriteTypeExists = Enum.IsDefined(typeof(FavoriteType), favoriteRequest.FavoriteType);
+            if (!favoriteTypeExists)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Tipo de favorito no encontrado.");
+            };
+            
             var favoriteUpdated = _favoriteMapping.FromEntityToEntityUpdated(favoriteRequest, favoriteExists);
 
             await _repositoryBaseFavorite.UpdateAsync(favoriteUpdated);
