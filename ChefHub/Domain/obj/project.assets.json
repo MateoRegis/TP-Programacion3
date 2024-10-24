@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ppp\\.nuget\\packages\\": {},
+    "C:\\Users\\de\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\ppp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ppp\\Desktop\\Repo 3ER CUATRI\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\de\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\de\\Desktop\\Repo GitHub\\Repo GitHub\\TpProgra3\\TP-Programacion3\\ChefHub\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ppp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\de\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

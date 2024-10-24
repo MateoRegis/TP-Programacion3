@@ -14,7 +14,8 @@ namespace Infrastructure.Data
         {
             return await _context.Favorites
                 .Where(f => f.UserId == userId && f.FavoriteType == favoriteType)   // Filtrar por UserId y FavoriteType
-                .Include(f => f.Recipe)                                             // Incluir la relación con Recipe
+                .Include(f => f.Recipe)
+                .ThenInclude(r => r.User)// Incluir la relación con Recipe
                 .Select(f => f.Recipe)                                              // Seleccionar solo las recetas
                 .ToListAsync();                                                     // Obtener la lista de recetas
         }
@@ -24,12 +25,13 @@ namespace Infrastructure.Data
             return await _context.Favorites
                 .Where(f => f.UserId == userId)
                 .Include(f => f.Recipe)
+                .ThenInclude(r => r.User)
                 .Select(f => f)
                 .ToListAsync();
         }
         public async Task<List<Favorite>> GetFavoritesByRecipe(int recipeId)
         {
-            return await _context.Favorites.Where(f => f.RecipeId == recipeId).ToListAsync();
+            return await _context.Favorites.Include(r => r.User).Where(f => f.RecipeId == recipeId).ToListAsync();
         }
     }
 }

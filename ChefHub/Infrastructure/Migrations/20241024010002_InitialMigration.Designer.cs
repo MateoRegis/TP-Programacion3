@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241011214730_CommentTable2")]
-    partial class CommentTable2
+    [Migration("20241024010002_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,19 +26,23 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("RecipeId")
+                    b.Property<int>("RecipeId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("Score")
+                    b.Property<int>("Score")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Text")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RecipeId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -47,6 +51,9 @@ namespace Infrastructure.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FavoriteType")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("RecipeId")
@@ -76,7 +83,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Difficulty")
+                    b.Property<int?>("Difficulty")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Ingredients")
@@ -98,6 +105,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Recipes");
                 });
@@ -129,6 +138,37 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Soy el administrador de esta aplicación",
+                            Email = "admin@gmail.com",
+                            FullName = "Admin",
+                            Password = "$2a$11$OhIrGuz7bbglkh9UJaBmSO8FGGmPGUoznEm6bmW3eH87nfmL1Ur/W",
+                            TipoRol = 0,
+                            UrlPhoto = "string"
+                        });
+                });
+
+            modelBuilder.Entity("Domain.Entities.Comment", b =>
+                {
+                    b.HasOne("Domain.Entities.Recipe", "Recipe")
+                        .WithMany("ListComments")
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.Favorite", b =>
@@ -148,6 +188,22 @@ namespace Infrastructure.Migrations
                     b.Navigation("Recipe");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Recipe", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Recipe", b =>
+                {
+                    b.Navigation("ListComments");
                 });
 #pragma warning restore 612, 618
         }

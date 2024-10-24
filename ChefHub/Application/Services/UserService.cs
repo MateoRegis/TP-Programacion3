@@ -24,6 +24,7 @@ namespace Application.Services
         public async Task<UserResponse> CreateUserAsync(UserRequest request)
         {
             var user = _userMapping.FromRequestToEntity(request);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             var entity = await _repositoryBase.AddAsync(user);
             return _userMapping.FromUserToResponse(entity);
         }

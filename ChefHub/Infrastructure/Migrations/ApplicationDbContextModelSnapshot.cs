@@ -135,6 +135,18 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Soy el administrador de esta aplicación",
+                            Email = "admin@gmail.com",
+                            FullName = "Admin",
+                            Password = "$2a$11$OhIrGuz7bbglkh9UJaBmSO8FGGmPGUoznEm6bmW3eH87nfmL1Ur/W",
+                            TipoRol = 0,
+                            UrlPhoto = "string"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Comment", b =>

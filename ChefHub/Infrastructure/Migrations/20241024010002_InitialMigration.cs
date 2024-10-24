@@ -11,19 +11,7 @@ namespace Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Favorites",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Favorites", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -33,17 +21,11 @@ namespace Infrastructure.Migrations
                     UrlPhoto = table.Column<string>(type: "TEXT", nullable: true),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     Password = table.Column<string>(type: "TEXT", nullable: true),
-                    TipoRol = table.Column<int>(type: "INTEGER", nullable: false),
-                    FavoriteId = table.Column<int>(type: "INTEGER", nullable: true)
+                    TipoRol = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_User_Favorites_FavoriteId",
-                        column: x => x.FavoriteId,
-                        principalTable: "Favorites",
-                        principalColumn: "Id");
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,23 +41,18 @@ namespace Infrastructure.Migrations
                     UrlImage = table.Column<string>(type: "TEXT", nullable: true),
                     Categories = table.Column<string>(type: "TEXT", nullable: true),
                     PreparationTime = table.Column<int>(type: "INTEGER", nullable: true),
-                    Difficulty = table.Column<int>(type: "INTEGER", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: true),
-                    FavoriteId = table.Column<int>(type: "INTEGER", nullable: true)
+                    Difficulty = table.Column<int>(type: "INTEGER", nullable: true),
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Recipes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Recipes_Favorites_FavoriteId",
-                        column: x => x.FavoriteId,
-                        principalTable: "Favorites",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Recipes_User_UserId",
+                        name: "FK_Recipes_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "Id");
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,9 +62,9 @@ namespace Infrastructure.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(type: "TEXT", nullable: true),
-                    Score = table.Column<int>(type: "INTEGER", nullable: true),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: true),
-                    RecipeId = table.Column<int>(type: "INTEGER", nullable: true)
+                    Score = table.Column<int>(type: "INTEGER", nullable: false),
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,13 +73,47 @@ namespace Infrastructure.Migrations
                         name: "FK_Comments_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Comments_User_UserId",
+                        name: "FK_Comments_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "Id");
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Favorites",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false),
+                    FavoriteType = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Favorites", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Favorites_Recipes_RecipeId",
+                        column: x => x.RecipeId,
+                        principalTable: "Recipes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Favorites_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Description", "Email", "FullName", "Password", "TipoRol", "UrlPhoto" },
+                values: new object[] { 1, "Soy el administrador de esta aplicación", "admin@gmail.com", "Admin", "$2a$11$OhIrGuz7bbglkh9UJaBmSO8FGGmPGUoznEm6bmW3eH87nfmL1Ur/W", 0, "string" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_RecipeId",
@@ -115,19 +126,19 @@ namespace Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Recipes_FavoriteId",
-                table: "Recipes",
-                column: "FavoriteId");
+                name: "IX_Favorites_RecipeId",
+                table: "Favorites",
+                column: "RecipeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Favorites_UserId",
+                table: "Favorites",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Recipes_UserId",
                 table: "Recipes",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_User_FavoriteId",
-                table: "User",
-                column: "FavoriteId");
         }
 
         /// <inheritdoc />
@@ -137,13 +148,13 @@ namespace Infrastructure.Migrations
                 name: "Comments");
 
             migrationBuilder.DropTable(
+                name: "Favorites");
+
+            migrationBuilder.DropTable(
                 name: "Recipes");
 
             migrationBuilder.DropTable(
-                name: "User");
-
-            migrationBuilder.DropTable(
-                name: "Favorites");
+                name: "Users");
         }
     }
 }
