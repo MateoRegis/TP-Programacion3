@@ -17,7 +17,7 @@ namespace ChefHub.Controllers
             _userService = userService;
         }
         [HttpGet("{idUser}")]
-        public async Task<ActionResult<UserResponse>> GetUserById([FromRoute]int idUser)
+        public async Task<ActionResult<UserResponse>> GetUserById([FromRoute] int idUser)
         {
             var response = await _userService.GetUserById(idUser);
             if (response == null)
@@ -50,7 +50,12 @@ namespace ChefHub.Controllers
             {
                 return Unauthorized(new { success = false, message = "Usuario no autorizado" });
             }
-            await _userService.ModifyUser(request, int.Parse(userIdClaim));
+            bool response = await _userService.ModifyUser(request, int.Parse(userIdClaim));
+            if (!response)
+            {
+                return BadRequest(new { success = false, message = "Ya existe un usuario con este correo" });
+
+            }
             return Ok(new { success = true, message = "Usuario modificado" });
         }
 

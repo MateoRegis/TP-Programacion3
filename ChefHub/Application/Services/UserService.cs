@@ -57,15 +57,21 @@ namespace Application.Services
             var responseMapped = _userMapping.FromUserToResponse(response);
             return responseMapped;
         }
-        public async Task ModifyUser(UserRequest request, int userId)
+        public async Task<bool> ModifyUser(UserRequest request, int userId)
         {
             var user = await _repositoryBase.GetByIdAsync(userId);
             if (user == null)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Usuario no encontrado.");
             }
+            var exist = await _userRepository.GetUserByUserEmail(request.Email);
+            if (exist != null)
+            {
+                return false;
+            }
             var response =_userMapping.FromEntityToEntityUpdated(request, user);
             await _repositoryBase.UpdateAsync(response);
+            return true;
         }
     }
 }

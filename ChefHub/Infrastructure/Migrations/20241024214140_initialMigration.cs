@@ -5,7 +5,7 @@
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class initialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -111,7 +111,7 @@ namespace Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Description", "Email", "FullName", "Password", "TipoRol", "UrlPhoto" },
-                values: new object[] { 1, "Soy el administrador de esta aplicación", "admin@gmail.com", "Admin", "$2a$11$FyFwTsG/zcMRlVAKwvqjBeYB1pPrRG398FvxzCR.W36HBrl4P7VcO", 0, "string" });
+                values: new object[] { 1, "Soy el administrador de esta aplicación", "admin@gmail.com", "Admin", "$2a$11$ElJEd.oyW7X3StcViXOaqOL.vbFF4uNLxkd198rWW5.QCJQXGfZFS", 0, "string" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_RecipeId",

@@ -19,18 +19,27 @@ namespace Application.Services
         private readonly IFavoriteRepository _favoriteRepository;
         private readonly IRepositoryBase<Comment> _repositoryBaseComment;
         private readonly ICommentRepository _commentRepository;
-        public RecipeService(IRepositoryBase<Recipe> repositoryBase, RecipeMapping recipeMapping, IRecipeRepository recipeRepository, IRepositoryBase<Favorite> repositoryBaseFavorite, IFavoriteRepository favoriteRepository, IRepositoryBase<Comment> repositoryBaseComment, ICommentRepository commentRepository)
+        private readonly IRepositoryBase<User> _repositoryBaseUser;
+
+        public RecipeService(IRepositoryBase<Recipe> repositoryBaseRecipe, RecipeMapping recipeMapping, IRecipeRepository recipeRepository, IRepositoryBase<Favorite> repositoryBaseFavorite, IFavoriteRepository favoriteRepository, IRepositoryBase<Comment> repositoryBaseComment, ICommentRepository commentRepository, IRepositoryBase<User> repositoryBaseUser)
         {
-            _repositoryBaseRecipe = repositoryBase;
+            _repositoryBaseRecipe = repositoryBaseRecipe;
             _recipeMapping = recipeMapping;
             _recipeRepository = recipeRepository;
             _repositoryBaseFavorite = repositoryBaseFavorite;
             _favoriteRepository = favoriteRepository;
             _repositoryBaseComment = repositoryBaseComment;
             _commentRepository = commentRepository;
+            _repositoryBaseUser = repositoryBaseUser;
         }
+
         public async Task<RecipeResponse> CreateRecipe(RecipeRequest request, int userId)
         {
+            var difficultyExist = Enum.IsDefined(typeof(Difficulty), request.Difficulty);
+            if (!difficultyExist)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Dificultad no encontrada.");
+            };
             var entity = _recipeMapping.FromRequestToEntity(request, userId);
             var response = await _repositoryBaseRecipe.AddAsync(entity);
             var responseMapped = _recipeMapping.FromEntityToResponse(response);
@@ -45,12 +54,13 @@ namespace Application.Services
                 throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
             }
 
+
             var recipeMapped = _recipeMapping.FromEntityToEntityUpdated(request, recipeExists);
             await _repositoryBaseRecipe.UpdateAsync(recipeMapped);
         }
 
         public async Task DeleteRecipe(int recipeId, int userId, Role role)
-        {   
+        {
             var recipeExists = await _repositoryBaseRecipe.GetByIdAsync(recipeId);
             if (recipeExists == null)
             {
@@ -78,6 +88,11 @@ namespace Application.Services
         }
         public async Task<List<RecipeResponse>> GetRecipesByUser(int userId)
         {
+            var userExist = await _repositoryBaseUser.GetByIdAsync(userId);
+            if (userExist == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Usuario no encontrado.");
+            }
             var response = await _recipeRepository.GetRecipesByUser(userId);
             var responseMapped = response.Select(r => _recipeMapping.FromEntityToResponse(r)).ToList();
             return responseMapped;

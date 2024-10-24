@@ -143,7 +143,7 @@ namespace Infrastructure.Migrations
                             Description = "Soy el administrador de esta aplicación",
                             Email = "admin@gmail.com",
                             FullName = "Admin",
-                            Password = "$2a$11$FyFwTsG/zcMRlVAKwvqjBeYB1pPrRG398FvxzCR.W36HBrl4P7VcO",
+                            Password = "$2a$11$ElJEd.oyW7X3StcViXOaqOL.vbFF4uNLxkd198rWW5.QCJQXGfZFS",
                             TipoRol = 0,
                             UrlPhoto = "string"
                         });

@@ -1,4 +1,5 @@
 ﻿using Domain.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Models.Request
 {

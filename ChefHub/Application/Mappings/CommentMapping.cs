@@ -31,7 +31,6 @@ namespace Application.Mappings
         {
             comment.Score = request.Score ?? comment.Score;
             comment.Text = request.Text ?? comment.Text;
-            comment.RecipeId = request.RecipeId ?? comment.RecipeId;
             return comment;
         }
     }
