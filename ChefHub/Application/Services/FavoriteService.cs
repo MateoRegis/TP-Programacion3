@@ -27,7 +27,6 @@ namespace Application.Services
             _favoriteMapping = favoriteMapping;
             _recipeMapping = recipeMapping;
         }
-
         public async Task AddToFavorites(int userId, FavoriteRequest favoriteRequest)
         {
             var recipeExist = await _repositoryBaseRecipe.EntityExistsAsync(favoriteRequest.RecipeId);
@@ -51,7 +50,6 @@ namespace Application.Services
             var entity = _favoriteMapping.FromRequestToEntity(userId, favoriteRequest);
             await _repositoryBaseFavorite.AddAsync(entity);
         }
-
         public async Task DeleteFavorite(int userId, int favoriteId)
         {
             var favoriteExists = await _repositoryBaseFavorite.GetByIdAsync(favoriteId);
@@ -65,7 +63,6 @@ namespace Application.Services
             }
             await _repositoryBaseFavorite.DeleteAsync(favoriteExists);
         }
-
         public async Task ModifyFavorite(int userId, int favoriteId, FavoriteRequest favoriteRequest)
         {
             var favoriteExists = await _repositoryBaseFavorite.GetByIdAsync(favoriteId);
@@ -73,21 +70,34 @@ namespace Application.Services
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Favorito no encontrado.");
             }
+
             if (favoriteExists.UserId != userId)
             {
                 throw new NotAllowedException(HttpStatusCode.Forbidden, "Favorito no pertenece al usuario");
             }
-            favoriteExists.FavoriteType = favoriteRequest.FavoriteType;
-            await _repositoryBaseFavorite.UpdateAsync(favoriteExists);
-        }
 
+            var recipeExists = await _repositoryBaseRecipe.GetByIdAsync(favoriteRequest.RecipeId);
+            if (recipeExists == null)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Receta no encontrada.");
+            }
+
+            var favoriteTypeExists = Enum.IsDefined(typeof(FavoriteType), favoriteRequest.FavoriteType);
+            if (!favoriteTypeExists)
+            {
+                throw new NotFoundException(HttpStatusCode.NotFound, "Tipo de favorito no encontrado.");
+            };
+            
+            var favoriteUpdated = _favoriteMapping.FromEntityToEntityUpdated(favoriteRequest, favoriteExists);
+
+            await _repositoryBaseFavorite.UpdateAsync(favoriteUpdated);
+        }
         public async Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType)
         {
             var favorite = await _favoriteRepository.GetFavoriteRecipesByUserAndType(userId, favoriteType);
             var response = favorite.Select(f => _recipeMapping.FromEntityToResponse(f)).ToList();
             return response;
         }
-
         public async Task<List<FavoriteResponse>> GetAllUserFavorites(int userId)
         {
             var favorite = await _favoriteRepository.GetAllUserFavorites(userId);

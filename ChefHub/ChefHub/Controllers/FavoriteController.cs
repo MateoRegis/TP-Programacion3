@@ -11,14 +11,12 @@ namespace Web.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class FavoriteController : ControllerBase
-    {   
+    {
         private readonly IFavoriteService _favoriteService;
-
         public FavoriteController(IFavoriteService favoriteService)
         {
             _favoriteService = favoriteService;
         }
-
         [HttpPost("[Action]")]
         [Authorize]
         public async Task<IActionResult> AddToFavorites([FromBody] FavoriteRequest request)
@@ -32,7 +30,7 @@ namespace Web.Controllers
                 }
                 await _favoriteService.AddToFavorites(int.Parse(userIdClaim), request);
                 return Ok(new { success = true });
-                
+
             }
             catch (NotFoundException ex)
             {
@@ -68,11 +66,16 @@ namespace Web.Controllers
         [Authorize]
         public async Task<IActionResult> ModifyFavorite([FromRoute] int favoriteId, [FromBody] FavoriteRequest request)
         {
-            try {
+            try
+            {
                 var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
                 if (userIdClaim == null)
                 {
                     return Unauthorized(new { success = false, message = "Usuario no autorizado" });
+                }
+                if (string.IsNullOrEmpty(request.FavoriteType.ToString()))
+                {
+                    return BadRequest(new { Success = false, Message = "El tipo de favorito es obligatorio." });
                 }
                 await _favoriteService.ModifyFavorite(int.Parse(userIdClaim), favoriteId, request);
                 return NoContent();

@@ -21,10 +21,10 @@ namespace Application.Mappings
                 UserId = userId,
             };
         }
-
         public RecipeResponse FromEntityToResponse(Recipe entity)
         {
-            var mapping = new CommentMapping();
+            var commentMapping = new CommentMapping();
+            var userMapping = new UserMapping();
             return new RecipeResponse
             {
                 Id = entity.Id,
@@ -36,12 +36,10 @@ namespace Application.Mappings
                 Instructions = entity.Instructions,
                 UrlImage = entity.UrlImage,
                 PreparationTime = entity.PreparationTime,
-                Comments = entity.ListComments.Select(s => mapping.FromEntityToResponse(s)).ToList(),
-                UserId = entity.UserId,
-
+                Comments = entity.ListComments.Select(s => commentMapping.FromEntityToResponse(s)).ToList(),
+                UserResponse = entity.User != null ? userMapping.FromUserToResponse(entity.User) : null
             };
         }
-
         public Recipe? FromEntityToEntityUpdated(RecipeRequest request, Recipe recipe)
         {
             recipe.Title = request.Title ?? recipe.Title;

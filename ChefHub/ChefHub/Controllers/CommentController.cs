@@ -3,7 +3,6 @@ using Application.Models.Request;
 using Domain.Enum;
 using Domain.Exceptions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -20,9 +19,7 @@ namespace ChefHub.Controllers
         {
             _commentService = commentService;
         }
-
         [HttpPost("[action]")]
-
         public async Task<ActionResult> CreateComment([FromBody] CommentRequest request)
         {
             try
@@ -35,8 +32,6 @@ namespace ChefHub.Controllers
 
                 }
                 var response = await _commentService.CreateComment(request, int.Parse(userIdClaim));
-
-
                 return Ok(new { success = true, data = response });
 
             }
@@ -44,9 +39,6 @@ namespace ChefHub.Controllers
             {
                 return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
-
-
-
         }
         [HttpDelete("{commentId}")]
         public async Task<ActionResult> DeleteComment([FromRoute] int commentId, [FromQuery] int recipeId)

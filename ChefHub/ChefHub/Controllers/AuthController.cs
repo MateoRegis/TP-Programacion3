@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Models.Request;
+using Domain.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChefHub.Controllers
@@ -20,15 +21,12 @@ namespace ChefHub.Controllers
             try
             {
                 var token = await _customAuthenticationService.Authenticate(request);
-                if (token == null)
-                {
-                    return Unauthorized();
-                }
+
                 return Ok(token);
             }
-            catch (Exception ex)
+            catch (NotAllowedException ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode((int)ex.Code, new { Success = false, Message = ex.Msg });
             }
         }
     }

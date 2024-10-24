@@ -18,7 +18,6 @@ namespace Application.Services
         private readonly IRepositoryBase<User> _repositoryBaseUser;
         private readonly IRepositoryBase<Recipe> _repositoryBaseRecipe;
 
-
         public CommentService(IRepositoryBase<Comment> repositoryBase, CommentMapping commentMapping, ICommentRepository commentRepository, IRepositoryBase<User> repositoryBaseUser, IRepositoryBase<Recipe> repositoryBaseRecipe)
         {
             _repositoryBaseComment = repositoryBase;
@@ -27,7 +26,6 @@ namespace Application.Services
             _repositoryBaseUser = repositoryBaseUser;
             _repositoryBaseRecipe = repositoryBaseRecipe;
         }
-
         public async Task<CommentResponse> CreateComment(CommentRequest request, int userId)
         {
             var recipeExist = await _repositoryBaseRecipe.GetByIdAsync(request.RecipeId);
@@ -48,7 +46,6 @@ namespace Application.Services
             var responseMapped = _commentMapping.FromEntityToResponse(response);
             return responseMapped;
         }
-
         public async Task DeleteComment(int recipeId, int commentId, int userId, Role role)
         {
             var recipeExist = await _repositoryBaseRecipe.GetByIdAsync(recipeId);
@@ -74,14 +71,12 @@ namespace Application.Services
             }
             await _repositoryBaseComment.DeleteAsync(commentExist);
         }
-
         public async Task<List<CommentResponse>> GetCommentsByRecipe(int recipeId)
         {
             var response = await _commentRepository.GetCommentsByRecipe(recipeId);
             var responseMapped = response.Select(c => _commentMapping.FromEntityToResponse(c)).ToList();
             return responseMapped;
         }
-
         public async Task ModifyComment(CommentRequest request, int commentId, int userId)
         {
             var recipeExist = await _repositoryBaseRecipe.GetByIdAsync(request.RecipeId);

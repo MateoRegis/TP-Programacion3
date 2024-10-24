@@ -22,15 +22,20 @@ namespace ChefHub.Controllers
         [HttpPost("[action]")]
         public async Task<ActionResult<UserResponse>> CreateUserAsync(UserRequest request)
         {
-            //var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
             var userRoleClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
             if (userRoleClaim != Role.Admin.ToString())
             {
                 return Unauthorized("Se necesita rol de administrador para ejecutar esta accion");
             }
+
             var response = await _userService.CreateUserAsync(request);
+
+            if (response == null)
+            {
+                return BadRequest(new { success = false, message = "Ya existe un usuario con este correo" });
+            }
+
             return Created("", new { success = true, data = response });
         }
-
     }
 }
