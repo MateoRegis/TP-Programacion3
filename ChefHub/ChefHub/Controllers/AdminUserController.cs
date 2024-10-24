@@ -27,7 +27,14 @@ namespace ChefHub.Controllers
             {
                 return Unauthorized("Se necesita rol de administrador para ejecutar esta accion");
             }
+
             var response = await _userService.CreateUserAsync(request);
+
+            if (response == null)
+            {
+                return BadRequest(new { success = false, message = "Ya existe un usuario con este correo" });
+            }
+
             return Created("", new { success = true, data = response });
         }
     }

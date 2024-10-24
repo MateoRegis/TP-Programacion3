@@ -23,6 +23,11 @@ namespace Application.Services
         }
         public async Task<UserResponse> CreateUserAsync(UserRequest request)
         {
+            var exist = await _userRepository.GetUserByUserEmail(request.Email);
+            if(exist != null)
+            {
+                return null;
+            }
             var user = _userMapping.FromRequestToEntity(request);
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
             var entity = await _repositoryBase.AddAsync(user);
