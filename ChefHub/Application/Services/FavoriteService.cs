@@ -74,8 +74,9 @@ namespace Application.Services
             {
                 throw new NotAllowedException(HttpStatusCode.Forbidden, "Favorito no pertenece al usuario");
             }
-            favoriteExists.FavoriteType = favoriteRequest.FavoriteType;
-            await _repositoryBaseFavorite.UpdateAsync(favoriteExists);
+            var favoriteUpdated = _favoriteMapping.FromEntityToEntityUpdated(favoriteRequest, favoriteExists);
+
+            await _repositoryBaseFavorite.UpdateAsync(favoriteUpdated);
         }
         public async Task<List<RecipeResponse>> GetFavoritesByUserAndType(int userId, FavoriteType favoriteType)
         {

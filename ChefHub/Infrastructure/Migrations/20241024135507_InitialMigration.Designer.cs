@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241024010002_InitialMigration")]
+    [Migration("20241024135507_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -26,10 +26,10 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("RecipeId")
+                    b.Property<int?>("RecipeId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Score")
+                    b.Property<int?>("Score")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Text")
@@ -53,10 +53,10 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("FavoriteType")
+                    b.Property<int?>("FavoriteType")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("RecipeId")
+                    b.Property<int?>("RecipeId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UserId")
@@ -146,7 +146,7 @@ namespace Infrastructure.Migrations
                             Description = "Soy el administrador de esta aplicación",
                             Email = "admin@gmail.com",
                             FullName = "Admin",
-                            Password = "$2a$11$OhIrGuz7bbglkh9UJaBmSO8FGGmPGUoznEm6bmW3eH87nfmL1Ur/W",
+                            Password = "$2a$11$FyFwTsG/zcMRlVAKwvqjBeYB1pPrRG398FvxzCR.W36HBrl4P7VcO",
                             TipoRol = 0,
                             UrlPhoto = "string"
                         });
@@ -156,9 +156,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Recipe", "Recipe")
                         .WithMany("ListComments")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RecipeId");
 
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany()
@@ -175,9 +173,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Recipe", "Recipe")
                         .WithMany()
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RecipeId");
 
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany()

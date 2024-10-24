@@ -29,8 +29,9 @@ namespace Application.Mappings
         }
         public Comment FromEntityToEntityUpdated(CommentRequest request, Comment comment)
         {
-            comment.Score = request.Score;
+            comment.Score = request.Score ?? comment.Score;
             comment.Text = request.Text ?? comment.Text;
+            comment.RecipeId = request.RecipeId ?? comment.RecipeId;
             return comment;
         }
     }

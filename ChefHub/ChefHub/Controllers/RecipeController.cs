@@ -10,7 +10,7 @@ namespace ChefHub.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RecipeController : ControllerBase    
+    public class RecipeController : ControllerBase
     {
         private readonly IRecipeService _recipeService;
         public RecipeController(IRecipeService recipeService)
@@ -27,7 +27,7 @@ namespace ChefHub.Controllers
                 return Unauthorized(new { success = false, message = "Usuario no autorizado" });
             }
             var response = await _recipeService.CreateRecipe(request, int.Parse(userIdClaim));
-            return Ok(new { success = true, data = response });
+            return Created("", new { success = true, data = response });
         }
 
         [HttpPut("{recipeId}")]
@@ -42,7 +42,7 @@ namespace ChefHub.Controllers
                     return Unauthorized(new { success = false, message = "Usuario no autorizado" });
                 }
                 await _recipeService.ModifyRecipe(request, recipeId, int.Parse(userIdClaim));
-                return Ok(new { success = true, message = "Receta modificada" });
+                return NoContent();
 
             }
             catch (NotFoundException ex)

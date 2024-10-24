@@ -37,7 +37,7 @@ namespace Application.Mappings
                 UrlImage = entity.UrlImage,
                 PreparationTime = entity.PreparationTime,
                 Comments = entity.ListComments.Select(s => commentMapping.FromEntityToResponse(s)).ToList(),
-                UserResponse=userMapping.FromUserToResponse(entity.User)
+                UserResponse = entity.User != null ? userMapping.FromUserToResponse(entity.User) : null
             };
         }
         public Recipe? FromEntityToEntityUpdated(RecipeRequest request, Recipe recipe)

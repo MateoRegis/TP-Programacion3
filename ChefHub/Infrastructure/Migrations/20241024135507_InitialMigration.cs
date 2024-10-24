@@ -62,9 +62,9 @@ namespace Infrastructure.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(type: "TEXT", nullable: true),
-                    Score = table.Column<int>(type: "INTEGER", nullable: false),
+                    Score = table.Column<int>(type: "INTEGER", nullable: true),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false)
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -73,8 +73,7 @@ namespace Infrastructure.Migrations
                         name: "FK_Comments_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Comments_Users_UserId",
                         column: x => x.UserId,
@@ -90,8 +89,8 @@ namespace Infrastructure.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false),
-                    FavoriteType = table.Column<int>(type: "INTEGER", nullable: false)
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: true),
+                    FavoriteType = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -100,8 +99,7 @@ namespace Infrastructure.Migrations
                         name: "FK_Favorites_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Favorites_Users_UserId",
                         column: x => x.UserId,
@@ -113,7 +111,7 @@ namespace Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Description", "Email", "FullName", "Password", "TipoRol", "UrlPhoto" },
-                values: new object[] { 1, "Soy el administrador de esta aplicación", "admin@gmail.com", "Admin", "$2a$11$OhIrGuz7bbglkh9UJaBmSO8FGGmPGUoznEm6bmW3eH87nfmL1Ur/W", 0, "string" });
+                values: new object[] { 1, "Soy el administrador de esta aplicación", "admin@gmail.com", "Admin", "$2a$11$FyFwTsG/zcMRlVAKwvqjBeYB1pPrRG398FvxzCR.W36HBrl4P7VcO", 0, "string" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_RecipeId",

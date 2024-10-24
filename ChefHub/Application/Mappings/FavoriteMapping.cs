@@ -25,5 +25,11 @@ namespace Application.Mappings
                 RecipeResponse = mapping.FromEntityToResponse(entity.Recipe)
             };
         }
+        public Favorite FromEntityToEntityUpdated(FavoriteRequest request, Favorite entity)
+        {
+            entity.RecipeId = request.RecipeId ?? entity.RecipeId;
+            entity.FavoriteType = request.FavoriteType ?? entity.FavoriteType;
+            return entity;
+        }
     }
 }
