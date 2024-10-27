@@ -50,9 +50,9 @@ namespace Application.Services
             var entity = _favoriteMapping.FromRequestToEntity(userId, favoriteRequest);
             await _repositoryBaseFavorite.AddAsync(entity);
         }
-        public async Task DeleteFavorite(int userId, int favoriteId)
+        public async Task DeleteFavorite(int userId, int recipeId)
         {
-            var favoriteExists = await _repositoryBaseFavorite.GetByIdAsync(favoriteId);
+            var favoriteExists = await _favoriteRepository.GetFavoriteByRecipeAndUserId(userId, recipeId);
             if (favoriteExists == null)
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Favorito no encontrado.");
@@ -87,7 +87,7 @@ namespace Application.Services
             {
                 throw new NotFoundException(HttpStatusCode.NotFound, "Tipo de favorito no encontrado.");
             };
-            
+
             var favoriteUpdated = _favoriteMapping.FromEntityToEntityUpdated(favoriteRequest, favoriteExists);
 
             await _repositoryBaseFavorite.UpdateAsync(favoriteUpdated);

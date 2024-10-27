@@ -38,9 +38,9 @@ namespace Web.Controllers
             }
         }
 
-        [HttpDelete("{favoriteId}")]
+        [HttpDelete("{recipeId}")]
         [Authorize]
-        public async Task<IActionResult> DeleteFavorite([FromRoute] int favoriteId)
+        public async Task<IActionResult> DeleteFavorite([FromRoute] int recipeId)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace Web.Controllers
                 {
                     return Unauthorized(new { success = false, message = "Usuario no autorizado" });
                 }
-                await _favoriteService.DeleteFavorite(int.Parse(userIdClaim), favoriteId);
+                await _favoriteService.DeleteFavorite(int.Parse(userIdClaim), recipeId);
                 return NoContent();
             }
             catch (NotFoundException ex)
