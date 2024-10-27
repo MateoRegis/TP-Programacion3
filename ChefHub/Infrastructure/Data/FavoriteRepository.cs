@@ -13,11 +13,11 @@ namespace Infrastructure.Data
         public async Task<List<Recipe?>> GetFavoriteRecipesByUserAndType(int userId, FavoriteType favoriteType)
         {
             return await _context.Favorites
-                .Where(f => f.UserId == userId && f.FavoriteType == favoriteType) 
+                .Where(f => f.UserId == userId && f.FavoriteType == favoriteType)
                 .Include(f => f.Recipe)
                 .ThenInclude(r => r.User)
-                .Select(f => f.Recipe)                                             
-                .ToListAsync();                                                    
+                .Select(f => f.Recipe)
+                .ToListAsync();
         }
 
         public async Task<List<Favorite>> GetAllUserFavorites(int userId)
@@ -32,6 +32,10 @@ namespace Infrastructure.Data
         public async Task<List<Favorite>> GetFavoritesByRecipe(int recipeId)
         {
             return await _context.Favorites.Include(r => r.User).Where(f => f.RecipeId == recipeId).ToListAsync();
+        }
+        public async Task<Favorite?> GetFavoriteByRecipeAndUserId(int userId, int recipeId)
+        {
+            return await _context.Favorites.FirstOrDefaultAsync(r => r.UserId.Equals(userId) && r.RecipeId.Equals(recipeId));
         }
     }
 }
