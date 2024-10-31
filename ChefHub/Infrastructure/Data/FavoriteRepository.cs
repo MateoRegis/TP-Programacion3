@@ -15,6 +15,7 @@ namespace Infrastructure.Data
             return await _context.Favorites
                 .Where(f => f.UserId == userId && f.FavoriteType == favoriteType)
                 .Include(f => f.Recipe)
+                .ThenInclude(r => r.ListComments)
                 .ThenInclude(r => r.User)
                 .Select(f => f.Recipe)
                 .ToListAsync();
@@ -25,6 +26,7 @@ namespace Infrastructure.Data
             return await _context.Favorites
                 .Where(f => f.UserId == userId)
                 .Include(f => f.Recipe)
+                .ThenInclude(r => r.ListComments)
                 .ThenInclude(r => r.User)
                 .Select(f => f)
                 .ToListAsync();
